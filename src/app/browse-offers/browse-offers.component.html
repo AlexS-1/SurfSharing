@@ -1,1 +1,26 @@
-<p>browse-offers works!</p>
+<article class="browse-courses">
+    <div>
+      <h1>Browse Offers</h1>
+      <!-- Future feature
+      <form>
+        <input type="text" value="Search">
+      </form>
+        <input list="filter-types" name="myBrowser" />
+        <datalist id="filter-types">
+          <option value="Name">
+          <option value="Date">
+          <option value="Popularity">
+        </datalist>
+      -->
+    </div>
+    <section class="card-container" *ngFor="let content of contentData">
+  
+      <a [routerLink]="['/course-details', content.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="card">
+        <div class="inner-box">
+        </div>
+        <div class="description">
+            {{content.title}}
+        </div>
+      </a>
+    </section>
+  </article>

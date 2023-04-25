@@ -1,1 +1,56 @@
-<p>side-bar works!</p>
+<aside>
+    <nav>
+      <div [ngClass]="{'folded-in': !isSideBarOpen, 'folded-out': isSideBarOpen}" class="background">
+        <section class="link-container first-link">
+          <a href="my-account" routerLink="my-account" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <div class="image">
+              <img src="/assets/side_bar_icons/user.svg" alt="user-icon" class="icon user-icon">
+            </div>
+            <div class="heading">
+              <h2 [ngClass]="{'folded-in': !isSideBarOpen, 'folded-out': isSideBarOpen}">My Area</h2>
+            </div>
+          </a>
+        </section>
+        <section class="link-container">
+          <a href="my-offers" routerLink="/my-offers" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <div class="image">
+              <img src="/assets/side_bar_icons/list.svg" alt="list-icon" class="icon list-icon">
+            </div>
+            <div class="heading">
+              <h2 [ngClass]="{'folded-in': !isSideBarOpen, 'folded-out': isSideBarOpen}">My Offers</h2>
+            </div>
+          </a>
+        </section>
+        <section class="link-container">
+          <a href="browse-offers" routerLink="/browse-offers" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <div class="image">
+              <img src="/assets/side_bar_icons/earth.svg" alt="earth-icon" class="icon earth-icon">
+            </div>
+            <div class="heading">
+              <h2 [ngClass]="{'folded-in': !isSideBarOpen, 'folded-out': isSideBarOpen}">Browse Offers</h2>
+            </div>
+          </a>
+        </section>
+        <section class="link-container">
+          <a href="create-offer" routerLink="/create-offer" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <div class="image">
+              <img src="/assets/side_bar_icons/plus.svg" alt="plus-icon" class="icon plus-icon">
+            </div>
+            <div class="heading">
+              <h2 [ngClass]="{'folded-in': !isSideBarOpen, 'folded-out': isSideBarOpen}">Create Offer</h2>
+            </div>
+          </a>
+        </section>
+        <section class="link-container" (click)="signOut()">
+          <a href="home-course" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <div class="image">
+              <img src="/assets/side_bar_icons/close.svg" alt="close-icon" class="icon close-icon">
+            </div>
+            <div class="heading">
+              <h2 [ngClass]="{'folded-in': !isSideBarOpen, 'folded-out': isSideBarOpen}">Log-Out</h2>
+            </div>
+          </a>
+        </section>
+      </div>
+    </nav>
+  </aside>

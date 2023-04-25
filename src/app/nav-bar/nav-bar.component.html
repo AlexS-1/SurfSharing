@@ -1,1 +1,18 @@
-<p>nav-bar works!</p>
+<header>
+    <nav class="nav-bar">
+      <section class="heading">
+        <span class="text">
+          <div class="menu-button">
+            <button (click)="toggleSideBar()" class="button">
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+              <div class="line line3"></div>
+            </button>
+          </div>
+          <h1>
+            <a routerLink="/home" routerLinkActive="active" aria-current="page">SurfSharing</a>
+          </h1>
+        </span>
+      </section>
+    </nav>
+  </header>

@@ -1,0 +1,164 @@
+[
+    {
+        "user_id": 1,
+        "username": "user123",
+        "first_name": "Carlos",
+        "surname": "García",
+        "email": "carlos.garcia@example.com",
+        "birthday": "10.06.1994",
+        "password": "User123Pass"
+    },
+    {
+        "user_id": 2,
+        "username": "user456",
+        "first_name": "Marta",
+        "surname": "Fernández",
+        "email": "marta.fernandez@example.com",
+        "birthday": "15.07.1998",
+        "password": "User456Pass"
+    },
+    {
+        "user_id": 3,
+        "username": "user789",
+        "first_name": "Santiago",
+        "surname": "González",
+        "email": "santiago.gonzalez@example.com",
+        "birthday": "21.03.1997",
+        "password": "User789Pass"
+    },
+    {
+        "user_id": 4,
+        "username": "Luna Gómez",
+        "first_name": "Luna",
+        "surname": "Gómez",
+        "email": "luna.gomez@example.com",
+        "birthday": "29.08.1995",
+        "password": "LunaGomezPass"
+    },
+    {
+        "user_id": 5,
+        "username": "Joaquín Sánchez",
+        "first_name": "Joaquín",
+        "surname": "Sánchez",
+        "email": "joaquin.sanchez@example.com",
+        "birthday": "11.01.1996",
+        "password": "JoaquinSanchezPass"
+    },
+    {
+        "user_id": 6,
+        "username": "María Torres",
+        "first_name": "María",
+        "surname": "Torres",
+        "email": "maria.torres@example.com",
+        "birthday": "20.04.1999",
+        "password": "MariaTorresPass"
+    },
+    {
+        "user_id": 7,
+        "username": "Gabriel Flores",
+        "first_name": "Gabriel",
+        "surname": "Flores",
+        "email": "gabriel.flores@example.com",
+        "birthday": "06.11.1993",
+        "password": "GabrielFloresPass"
+    },
+    {
+        "user_id": 8,
+        "username": "Sofía Martínez",
+        "first_name": "Sofía",
+        "surname": "Martínez",
+        "email": "sofia.martinez@example.com",
+        "birthday": "30.12.1997",
+        "password": "SofiaMartinezPass"
+    },
+    {
+        "user_id": 9,
+        "username": "Juan Carlos",
+        "first_name": "Juan",
+        "surname": "Carlos",
+        "email": "juan.carlos@example.com",
+        "birthday": "16.05.1998",
+        "password": "JuanCarlosPass"
+    },
+    {
+        "user_id": 10,
+        "username": "Maria",
+        "first_name": "Maria",
+        "surname": "Rodríguez",
+        "email": "maria.rodriguez@example.com",
+        "birthday": "28.07.1996",
+        "password": "MariaPass"
+    },
+    {
+        "user_id": 11,
+        "username": "Miguel",
+        "first_name": "Miguel",
+        "surname": "Hernández",
+        "email": "miguel.hernandez@email.com",
+        "birthday": "16.03.1994",
+        "password": "m1gu3l_p4ssw0rd"
+    },
+    {
+        "user_id": 12,
+        "username": "Laura",
+        "first_name": "Laura",
+        "surname": "Díaz",
+        "email": "laura.diaz@email.com",
+        "birthday": "11.07.1995",
+        "password": "l4ur4_p4ssw0rd"
+    },
+    {
+        "user_id": 13,
+        "username": "user987",
+        "first_name": "Álvaro",
+        "surname": "García",
+        "email": "alvaro.garcia987@email.com",
+        "birthday": "22.09.1993",
+        "password": "alvaro987"
+    },
+    {
+        "user_id": 14,
+        "username": "happy_hacker",
+        "first_name": "Cristina",
+        "surname": "Ramírez",
+        "email": "cristina.ramirez654@email.com",
+        "birthday": "15.12.1996",
+        "password": "cristina654"
+    },
+    {
+        "user_id": 15,
+        "username": "rrramos",
+        "first_name": "Sergio",
+        "surname": "Pérez",
+        "email": "sergio.perez321@email.com",
+        "birthday": "31.05.1998",
+        "password": "sergio321"
+    },
+    {
+        "user_id": 16,
+        "username": "Carla",
+        "first_name": "Carla",
+        "surname": "Martínez",
+        "email": "carla.martinez@email.com",
+        "birthday": "27.02.1992",
+        "password": "carla_m4rtin3z"
+    },
+    {
+        "user_id": 17,
+        "username": "Samuel",
+        "first_name": "Samuel",
+        "surname": "Ruiz",
+        "email": "samuel.ruiz@email.com",
+        "birthday": "06.10.1999",
+        "password": "samuel_ru1z"
+    },
+    {
+        "user_id": 18,
+        "username": "Alicia",
+        "first_name": "Alicia",
+        "surname": "Sánchez",
+        "email": "alicia.sanchez@email.com",
+        "birthday": "18.11.1997",
+        "password": "4lici4_s4nchez"
+    }
+]

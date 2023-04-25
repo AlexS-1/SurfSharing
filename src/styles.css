@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body {
+    /* Font */
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    
+    /* Layout */
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 35px;
+}
+
+/*  Mobile */
+@media (max-width: 767px) {
+
+    body {
+        overflow-y: scroll;
+        min-height: 110vh;
+      }
+
+    h1{
+        font-weight: bolder;
+        font-size: 32px;
+    }
+
+    h2{
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    } 
+}

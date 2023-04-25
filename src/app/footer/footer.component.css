@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+
+.footer {
+  background-color: #0066A1;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  
+  padding-top: 19px;
+
+  
+}
+
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+.footer_components a,
+.footer_components p {
+  color: #fff;
+
+}
+
+.logo img {
+  width: 62px;
+}
+
+.links {
+  display: flex;
+  gap: 50px;
+
+}
+
+.socialMediaLogo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socialMediaLogo img {
+  width: 36px;
+}
+
+.copyright {
+  margin-left: 0.5rem;
+  right: 0;
+  margin-right: 2rem;
+
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+
+  .footer{
+    padding-left: 17px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: left !important;
+    gap: 100px;
+    padding: 0 8% 0 4%;
+  
+  }
+
+  .links {
+    display: flex;
+    gap: 190px;
+  
+  }
+
+  .copyright{
+    margin-left: 10px !important;
+  }
+
+
+
+}
+
+/* Tablet & kleiner Laptop Screen */
+@media (max-width: 1024px) and (min-width: 769) {
+  .links {
+    gap: 365px !important;
+
+  }
+  
+  .socialMediaLogo {
+    margin: 7%
+  }
+
+  .copyright{
+    margin-left: 10px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    overflow-y: auto;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+    padding: 10px;
+  }
+
+  .footer_container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .logo {
+    margin-bottom: 20px;
+    margin-top: 25px;;
+  }
+
+  .links {
+    margin-bottom: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .socialMediaLogo {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0;
+  }
+
+  .socialMediaLogo img {
+    width: 34px;
+    height: 34px;
+  }
+  
+
+  .copyright {
+    margin: 15px 0px 30px 0px;
+  }
+}

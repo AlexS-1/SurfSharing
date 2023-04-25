@@ -1,1 +1,29 @@
-<p>offer-details works!</p>
+<article class="my-courses">
+    <section class="grid-container" *ngIf="dataEntry">
+        <h1>{{ dataEntry.title }}</h1>
+        <div class="btns">
+            <button>
+                + Add to my Offers
+            </button>
+            <a href="book-offer" routerLink="/book-offer" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <button class="review">
+                    Book Offer
+                </button>
+            </a>
+        </div>
+    </section>
+    <div class="course-description" *ngIf="dataEntry">
+        <p>{{ dataEntry.description }}</p>
+    </div>
+    <div class="review-container">
+        <div class="review-box" *ngFor="let review of reviews">
+            <div class="username-rating">
+                <span class="username">{{ review.username }}</span>
+            </div>
+            
+            
+            <p class="date">{{ review.date }}</p>
+            <p class="review">{{ review.review }}</p>
+        </div>
+    </div>
+</article>

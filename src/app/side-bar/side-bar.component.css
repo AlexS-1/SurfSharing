@@ -1,0 +1,113 @@
+*{
+    padding-top: 6px;
+}
+
+.background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: #D8DCFF;
+    transition: width 0.3s ease-in-out; /* Change this line */
+    overflow-y: auto; 
+}
+
+.folded-in {
+    width: 90px;
+
+}
+
+.folded-out {
+    width: 300px;
+    transform: translateX(0); /* Change this line */
+    z-index: 50;
+}
+
+/* Add the following lines */
+.nav-bar, footer {
+  z-index: 130;
+  position: relative;
+}
+
+
+.line {
+    width: 24px;
+    height: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background: #FFA100;
+    border-radius: 3px;
+}
+
+/* Styling of the navigation items in the side bar */
+.first-link {
+    margin-top: 60px;
+}
+
+a {
+    display: grid;
+    grid-template-columns: 90px 210px;
+}
+
+.image {
+    float: inline-start;
+    width: 90px;
+    height: 90px;
+}
+
+.icon {
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+}
+h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    color: black;
+    margin-top: 25px;
+}
+
+h2:hover {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+h2.folded-in {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .folded-in {
+        width: 0px;
+        z-index: 20;
+    }
+
+    .folded-in.image{
+        size: 40px;
+    }
+    .folded-out {
+        width: 100%;
+        transform: translateX(0); /* Change this line */
+        z-index: 50;
+        padding: 7% 0 0 0;
+    }
+    .link-container {
+        margin-bottom: 10px; /* space between elements in menu */
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .icon{
+        width: 45px;
+        margin-right: 0px;
+    }
+
+    a {
+        display: grid;
+        grid-template-columns: 90px 280px;
+    }
+
+    h2 {
+        margin-top: 10px;
+    }
+}

@@ -1,1 +1,30 @@
-<p>create-account works!</p>
+<section class="signup-form">
+    <h2>Become a SurfSharer!</h2>
+    <form #createAccountForm="ngForm" (submit)="onSubmit()">
+        <div class="form-group">
+            <input type="text" [(ngModel)]="first_name" class="form-control" name="first_name" placeholder="First Name" minlength="2" maxlength="32" required>
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="surname" class="form-control" name="surname" placeholder="Surname" minlength="2" maxlength="32" required>
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="username" class="form-control" name="username" placeholder="Username" minlength="4" maxlength="32" required>
+        </div>
+        <div class="form-group">
+            <input type="date" [(ngModel)]="date_of_birth"class="form-control" name="date_of_birth" placeholder="Date of Birth" min="1930-01-01" max="2010-12-31" required>
+         </div>
+        <div class="form-group">
+            <input type="email" [(ngModel)]="email" id="email" class="form-control" name="email" placeholder="Email Address" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+        </div>
+        <div class="form-group">
+            <input type="password" [(ngModel)]="password" class="form-control" name="password" placeholder="Password" minlength="8" maxlength="25" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+        </div>
+        <div class="form-group">
+            <input type="password" [(ngModel)]="repeat_password" class="form-control" name="repeat_password" placeholder="Repeat Password" minlength="8" maxlength="25" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" (keyup)="checkValidityPasswords($event)" required>
+        </div>
+        <button class="btn" type="submit button" [disabled]="createAccountForm.form.invalid || !passwordValidity">
+            Create Account
+        </button>
+        <a href="log-in" routerLink="/log-in" routerLinkActive="active" ariaCurrentWhenActive="page">You already have an Account?</a>
+    </form>
+</section>

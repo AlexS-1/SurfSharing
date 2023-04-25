@@ -1,1 +1,9 @@
-<p>my-offers works!</p>
+<article class="my-courses">
+    <h1>My Offers</h1>
+    <section class="card-container">
+      <a *ngFor="let course of courses" [routerLink]="['/course-details', course.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="card">
+        <div class="inner-box"></div>
+        <div class="description">{{ course.title }}</div>
+      </a>
+    </section>
+</article>

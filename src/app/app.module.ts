@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { AppFetchDataTsService } from './app.fetch-data.ts.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,9 +43,11 @@ import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AppFetchDataTsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

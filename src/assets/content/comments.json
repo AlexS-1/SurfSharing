@@ -1,0 +1,176 @@
+[
+    {
+      "username": "user123",
+      "review": "El módulo de Programación Web y Movil es muy interesante. Aprendí mucho sobre Angular y cómo desarrollar aplicaciones web y móviles. Definitivamente lo recomiendo.",
+      "kurs_id": 1,
+      "date": "2022-08-20",
+      "rating": 5
+    },
+    {
+      "username": "user456",
+      "review": "El módulo de Economía y Política es muy útil para entender cómo funcionan los sistemas económicos y políticos. Las discusiones en clase son muy interesantes y enriquecedoras.",
+      "kurs_id": 16,
+      "date": "2022-09-01",
+      "rating": 1
+    },
+    {
+      "username": "user789",
+      "review": "El módulo de Desarrollo de Videojuegos es muy divertido. Me encantó aprender cómo crear juegos interactivos y aplicar técnicas avanzadas de programación y diseño. Lo recomiendo a todos los amantes de los videojuegos.",
+      "kurs_id": 20,
+      "date": "2022-10-10",
+      "rating": 5
+    },
+
+    {
+        "username": "Luna Gómez",
+        "review": "Me encantó el curso de Programación Web y Movil! Aprendí mucho sobre Angular y pude crear mi propia aplicación. Los profesores eran muy amables y siempre estaban dispuestos a ayudar. Definitivamente lo recomiendo!",
+        "kurs_id": 1,
+        "date": "2022-03-14",
+        "rating": 4
+      },
+      {
+        "username": "Joaquín Sánchez",
+        "review": "El curso de Computación Paralela fue muy desafiante pero muy interesante. Aprendí mucho sobre cómo aprovechar al máximo los recursos del procesador y cómo optimizar el rendimiento. Los ejercicios prácticos eran muy útiles y me permitieron aplicar lo que había aprendido en la teoría. Muy recomendable para aquellos que quieran profundizar en la programación paralela.",
+        "kurs_id": 2,
+        "date": "2022-02-19",
+        "rating": 5
+      },
+      {
+        "username": "María Torres",
+        "review": "Estructuras de Datos es un curso muy útil para cualquier persona que trabaje con programación. Aprendí sobre diferentes tipos de estructuras de datos y cuándo usarlas. Los ejercicios prácticos eran muy buenos y me permitieron aplicar lo que había aprendido en la teoría. Los profesores eran muy amables y estaban dispuestos a ayudar en cualquier momento.",
+        "kurs_id": 3,
+        "date": "2021-12-01",
+        "rating": 5
+      },
+      {
+        "username": "Gabriel Flores",
+        "review": "Proyectos de Ingeniería y Gestión del Software fue un curso muy completo. Aprendí sobre diferentes metodologías de desarrollo de software y sobre cómo planificar y gestionar proyectos. Los ejercicios prácticos fueron muy útiles y me permitieron aplicar lo que había aprendido en la teoría. Los profesores eran muy buenos y siempre estaban dispuestos a ayudar. Lo recomiendo mucho!",
+        "kurs_id": 4,
+        "date": "2022-01-25",
+        "rating": 5
+      },
+      {
+        "username": "Sofía Martínez",
+        "review": "El curso de Bases de Datos fue muy interesante. Aprendí sobre diferentes tipos de bases de datos y sobre cómo diseñar y crear una base de datos. Los ejercicios prácticos fueron muy útiles y me permitieron aplicar lo que había aprendido en la teoría. Los profesores eran muy buenos y estaban dispuestos a ayudar en cualquier momento. Lo recomiendo mucho!",
+        "kurs_id": 5,
+        "date": "2022-02-14",
+        "rating": 5
+      },
+      {
+        "username": "Juan Carlos",
+        "review": "La Física Cuántica es un tema muy interesante y este curso no decepcionó. Los profesores eran muy buenos y explicaban muy bien los conceptos. Los ejercicios prácticos eran muy útiles y me permitieron aplicar lo que había aprendido en la teoría. Lo recomiendo para aquellos que estén interesados en la física teórica.",
+        "kurs_id": 21,
+        "date": "2021-10-10",
+        "rating": 5
+      },
+      {
+        "username": "Maria",
+        "review": "Este curso de Biología Molecular y Celular fue muy interesante y completo. Aprendí mucho sobre la estructura y función de las células y los procesos moleculares que tienen lugar dentro de ellas. Los profesores fueron muy apasionados y expertos en su campo, y los proyectos prácticos fueron muy útiles para consolidar los conceptos aprendidos en la teoría.",
+        "kurs_id": 7,
+        "date": "2022-03-20",
+        "rating": 5
+      },
+      {
+        "username": "Santiago",
+        "review": "El módulo de Programación Web y Móvil fue muy desafiante pero también muy gratificante. Aprendí mucho sobre el desarrollo de aplicaciones web y móviles modernas, y las habilidades prácticas que adquirí en Angular y otras tecnologías son muy valiosas en el mercado laboral actual. Los profesores eran muy accesibles y dispuestos a ayudar, y el enfoque en la accesibilidad y la optimización del rendimiento fue especialmente útil.",
+        "kurs_id": 1,
+        "date": "2022-02-08",
+        "rating": 3
+      },
+      {
+        "username": "Luisa",
+        "review": "Este curso de Fisiología del Ejercicio fue muy interesante y útil para mi carrera como entrenadora personal. Aprendí mucho sobre cómo el cuerpo humano responde al ejercicio físico y cómo se pueden mejorar la resistencia y la fuerza muscular a través del entrenamiento adecuado. Los ejercicios prácticos fueron muy útiles para aplicar los conceptos aprendidos en la teoría, y los profesores eran muy conocedores y experimentados en el campo de la fisiología del ejercicio.",
+        "kurs_id": 17,
+        "date": "2022-01-15",
+        "rating": 5
+      },
+      {
+        "username": "Ana",
+        "review": "El módulo de Economía y Política fue muy interesante y oportuno para mi carrera en el sector público. Aprendí mucho sobre los conceptos básicos de la economía y la política, y cómo se aplican en la toma de decisiones gubernamentales. Los casos de estudio y las discusiones en clase fueron muy útiles para comprender los desafíos y las oportunidades en la intersección entre la economía y la política.",
+        "kurs_id": 16,
+        "date": "2021-12-12",
+        "rating": 5
+      },
+      {
+        "username": "Jorge",
+        "review": "Este curso de Desarrollo de Videojuegos fue muy divertido e interesante. Aprendí mucho sobre la programación y el diseño de juegos, y las habilidades prácticas que adquirí son muy útiles para mi carrera como desarrollador de software. Los proyectos prácticos fueron muy desafiantes pero también muy gratificantes, y los profesores eran muy conocedores y apasionados en el campo de los videojuegos.",
+        "kurs_id": 20,
+        "date": "2021-11-25",
+        "rating": 5
+      },
+
+      {
+        "username": "Marta",
+        "review": "El curso de Inteligencia Artificial fue muy interesante y desafiante. Los profesores eran muy bien informados y estaban dispuestos a ayudar en cualquier momento. Me gustó especialmente la parte práctica del curso, donde tuvimos la oportunidad de trabajar en proyectos reales y aplicar lo que habíamos aprendido. ¡Lo recomiendo altamente!",
+        "kurs_id": 10,
+        "date": "2022-03-27",
+        "rating": 5
+        },
+        {
+        "username": "Luis",
+        "review": "El módulo de Psicología Social fue muy informativo y relevante para mi carrera en psicología. Los profesores eran muy apasionados y conocedores del tema y nos dieron muchos recursos útiles para seguir aprendiendo después del curso. También me gustó mucho la estructura del curso, que nos permitió tener muchas discusiones en grupo y trabajar en proyectos prácticos.",
+        "kurs_id": 11,
+        "date": "2022-04-02",
+        "rating": 5
+        },
+        {
+        "username": "Ana",
+        "review": "Tomé el curso de Química Orgánica como un requisito para mi carrera de biología y encontré que era muy desafiante pero gratificante. Los profesores eran muy pacientes y estaban dispuestos a ayudar en cualquier momento. Me gustó especialmente la parte de laboratorio del curso, donde pude trabajar con mis compañeros de clase y aplicar lo que había aprendido en la teoría.",
+        "kurs_id": 8,
+        "date": "2022-04-04",
+        "rating": 5
+        },
+        {
+        "username": "Javier",
+        "review": "El curso de Biología Molecular y Celular fue muy interesante y relevante para mi carrera en biotecnología. Los profesores eran muy bien informados y se aseguraron de que comprendiéramos los conceptos clave en profundidad. También me gustó mucho la parte práctica del curso, donde tuvimos la oportunidad de trabajar con células y realizar experimentos.",
+        "kurs_id": 7,
+        "date": "2022-04-08",
+        "rating": 5
+        },
+        {
+        "username": "Carmen",
+        "review": "Me encantó el módulo de Programación Web y Móvil. Los profesores eran muy experimentados y se aseguraron de que comprendiéramos los conceptos clave en detalle. Me gustó especialmente la parte de diseño de interfaz de usuario, donde aprendí a crear interfaces de usuario atractivas y accesibles. También me gustó mucho la parte práctica del curso, donde pudimos trabajar en proyectos reales.",
+        "kurs_id": 1,
+        "date": "2022-04-12",
+        "rating": 5
+        },
+        {
+        "username": "Diego",
+        "review": "El módulo de Computación Paralela fue muy desafiante pero me gustó mucho. Los profesores eran muy conocedores del tema y nos dieron muchas oportunidades para aplicar lo que habíamos aprendido en la teoría. Me gustó especialmente la parte práctica del curso, donde pudimos trabajar en proyectos paralelos y aprender sobre enfoques de programación concurrente y sincronización.",
+        "kurs_id": 2,
+        "date": "2022-04-15",
+        "rating": 5
+        },
+        {
+        "username": "Luisa",
+        "review": "El curso de Sistemas Embebidos fue muy interesante, pero también muy desafiante. El contenido era muy denso y el ritmo de enseñanza era muy rápido. Aunque los profesores eran muy útiles, tuve dificultades para seguir el curso y completar las tareas a tiempo. Sin embargo, aprendí mucho y me siento orgullosa de haberlo logrado al final.",
+        "kurs_id": 18,
+        "date": "2022-02-20",
+        "rating": 5
+        },
+            
+        {
+        "username": "Carlos",
+        "review": "El curso de Sistemas Embebidos fue uno de los más difíciles que he tomado. El contenido era muy técnico y la carga de trabajo era muy pesada. A menudo me sentía abrumado por la cantidad de información que tenía que absorber. Sin embargo, los profesores eran muy conocedores del tema y estaban siempre dispuestos a ayudar. Al final, aprendí mucho y estoy contento de haberlo completado.",
+        "kurs_id": 18,
+        "date": "2022-03-05",
+        "rating": 5
+        },
+
+        {
+            "username": "Miguel",
+            "review": "El curso de Estructuras de Datos fue muy difícil para mí. Aunque los profesores eran muy buenos y conocedores del tema, el contenido era muy técnico y abstracto. Tuve dificultades para entender algunos de los conceptos clave y me tomó mucho tiempo completar las tareas y los proyectos. A pesar de las dificultades, aprendí mucho y estoy agradecido por la experiencia.",
+            "kurs_id": 3,
+            "date": "2022-03-12",
+            "rating": 5
+            },
+            
+            {
+            "username": "Laura",
+            "review": "Estructuras de Datos fue uno de los cursos más difíciles que tomé. Aunque el contenido era interesante, también era muy denso y abstracto. A menudo me sentía perdida y confundida, y tuve dificultades para completar las tareas y los proyectos a tiempo. Aunque los profesores eran muy útiles, me hubiera gustado tener más tiempo y recursos para entender mejor el material.",
+            "kurs_id": 3,
+            "date": "2022-04-23",
+            "rating": 5
+            }
+  ]
+  

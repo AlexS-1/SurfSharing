@@ -1,0 +1,158 @@
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+    app-nav-bar {
+      height: 50px;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      background-color: #0066A1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px 0px 10px 7px;
+    }
+  
+    app-side-bar {
+      width: 90px;
+      left: 0px;
+      margin-bottom: 106px;
+  
+      z-index: 50;
+    }
+  
+    app-footer{
+      z-index: 100;
+    }
+  
+    .footer-app {
+      z-index: 100;
+    }
+  
+    main {
+      margin-top: 60px;
+      margin-bottom: 106px;
+      padding: 0 0 0 50px;
+    }
+  
+  
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      margin: 0;
+    }
+  
+    .footer{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    .side-bar-app .background {
+      z-index: 60;
+      overflow-y: auto;
+    }
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    app-nav-bar {
+      height: 50px;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      background-color: #0066A1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px 0px 10px 7px;
+    }
+  
+    app-side-bar {
+      width: 90px;
+      left: 0px;
+      margin-bottom: 106px;
+      z-index: 90;
+    }
+  
+    main {
+      margin-top: 60px;
+      margin-right: 35px;
+      margin-bottom: 106px;
+      padding-left: 130px;
+      padding-top: 5px;
+    }
+  
+  
+  
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+      margin: 0;
+    }
+  
+    .footer{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 100;
+    }
+  
+    .footer .copyright{
+      justify-content: right;
+      display: flex;
+      text-align: right;
+    }
+  }
+  
+  /* Movíl */
+  /* Mobile */
+  @media (max-width: 767px) {
+    app-nav-bar {
+      height: 50px;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      background-color: #0066A1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px 0px 12px 1.5%;
+    }
+    
+    app-side-bar {
+      width: 90px;
+      left: 0px;
+      margin-bottom: 106px;
+      z-index: 90;
+   
+    }
+  
+    main {
+      padding: 78px 20px;
+    }
+  
+    .footer {
+      background-color: #0066A1;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+  
+    }
+  
+    .footer.disabled {
+      display: none;
+    }
+  
+    .router.disabled {
+      display: none;
+    }
+}  

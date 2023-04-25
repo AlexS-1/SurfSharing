@@ -1,0 +1,16 @@
+.terms-of-use {
+    margin: 12px 5%;
+    padding: 12px 24px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.terms-of-use-text {
+    background-color: #D8DCFF;
+    margin-top: 48px;
+    padding: 24px;
+    border-radius: 24px;
+}

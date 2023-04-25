@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import contentData from './../../assets/content/course.json';
 
 @Component({
   selector: 'app-browse-offers',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./browse-offers.component.css']
 })
 export class BrowseOffersComponent {
+  contentData = contentData;
 
+  ngOnInit(): void {}
 }

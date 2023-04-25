@@ -1,0 +1,94 @@
+h1 {
+    font-weight: bolder;
+    font-size: 26px;
+    margin: 0;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    padding-left: 1rem;
+  }
+  
+  .heading {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-button {
+    display: flex;
+    align-items: center;
+    margin-right: 16%;
+    height: 40px;
+    width:40px;
+    background-color: whitesmoke;
+    z-index: 130;
+    float: inline-start;
+    border-radius: 20%;
+    padding: 2px;
+  }
+  
+  .button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .line {
+    background-color: orange;
+    height: 4px;
+    border-radius: 25%;
+    margin: 3px;
+  }
+  
+  
+  /* Movíl */
+  @media (max-width: 767px) {
+    .menu-button {
+      display: flex;
+      align-items: center;
+      margin-right: 10%;
+  
+      height: 40px;
+      width:40px;
+      background-color: whitesmoke;
+      z-index: 130;
+      float: inline-start;
+      border-radius: 20%;
+      padding: 2px;
+    }
+  
+    .button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 45px;
+      height: 45px;
+    }
+  
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      padding: 0.27rem;
+      padding-left: 1rem;
+    }
+  
+    h1 {
+      font-weight: bolder;
+      font-size: 26px;
+      margin: 0;
+    }
+  }
