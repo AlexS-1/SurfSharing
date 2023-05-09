@@ -7,7 +7,7 @@ import jsonData from './../../assets/content/course.json';
   styleUrls: ['./my-offers.component.css']
 })
 export class MyOffersComponent implements OnInit {
-  courses: any[] = [];
+  contentData: any[] = [];
   selectedCourseIds = [1, 2]; // Liste der ausgewählten Kurs-IDs
 
   ngOnInit(): void {
@@ -15,6 +15,6 @@ export class MyOffersComponent implements OnInit {
   }
 
   private loadSelectedCourses(): void {
-    this.courses = jsonData.filter(course => this.selectedCourseIds.includes(course.id));
+    this.contentData = jsonData.filter(course => this.selectedCourseIds.includes(course.id));
   }
 }

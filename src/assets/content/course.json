@@ -3,145 +3,167 @@
     "id": 1,  
     "title": "Programación Web y Movíl",  
     "description": "En el módulo Programación Web y Móvil, los estudiantes aprenden a desarrollar aplicaciones web y móviles utilizando tecnologías y marcos modernos, como Angular. A lo largo del curso, exploran conceptos clave en el diseño y la arquitectura de aplicaciones, así como en la creación de interfaces de usuario receptivas y accesibles. Además, el módulo proporciona a los estudiantes habilidades prácticas para la implementación de aplicaciones en múltiples plataformas y la optimización del rendimiento en diversos dispositivos.",  
-    "userId": "42"  
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   }, 
 
   {  
     "id": 2,  
     "title": "Computacion Parallela",  
     "description": "En el módulo Computación Paralela, los estudiantes aprenden acerca de los conceptos y técnicas fundamentales para diseñar y desarrollar algoritmos y aplicaciones paralelas que aprovechan múltiples núcleos de procesadores, clusters y sistemas distribuidos. Durante el curso, se exploran enfoques de programación concurrente, sincronización, comunicación entre procesos y balanceo de carga. Además, los estudiantes adquieren habilidades prácticas para evaluar y mejorar el rendimiento de las aplicaciones paralelas en una variedad de arquitecturas y plataformas.",  
-    "userId": "11"  
+    "userId": "42",
+    "imageURL": "https://cdn.shopify.com/s/files/1/0420/1765/2895/files/modern-surfboards.jpg?v=1671489726&width=1500"  
   },
 
   {  
     "id": 3,  
     "title": "Estructuras de Datos",  
     "description": "En el módulo Estructuras de Datos, los estudiantes aprenden sobre las estructuras de datos fundamentales y cómo se utilizan para representar, almacenar y manipular información en aplicaciones de software. Durante el curso, se exploran conceptos clave como listas enlazadas, árboles, pilas, colas, tablas hash y grafos. Además, los estudiantes adquieren habilidades para analizar y comparar el rendimiento y la eficiencia de diferentes estructuras de datos en función de sus propiedades y aplicaciones específicas.",  
-    "userId": "42"  
+    "userId": "42",
+    "imageURL": "https://cdn.shopify.com/s/files/1/1087/6474/products/BERZERKER6_4_BLUE_GREEN_GROUP.png?v=1653424748&width=500"  
   },
 
   {  
     "id": 4,  
     "title": "Proyectos de Ingeniería y Gestión del Software",  
     "description": "En el módulo Proyectos de Ingeniería y Gestión del Software, los estudiantes aprenden sobre las metodologías y procesos clave en el desarrollo de software, como la planificación de proyectos, la gestión de requisitos y la programación ágil. También adquieren experiencia práctica en la implementación de sistemas de control de versiones, pruebas de software y técnicas de integración continua. Además, el módulo cubre aspectos importantes de la gestión de proyectos de software, como la gestión de riesgos, la comunicación efectiva y la asignación de recursos.",  
-    "userId": "42"  
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"  
   },
 
   {  
     "id": 5,  
     "title": "Databases",  
     "description": "Participants learn about various types of database systems, such as relational, NoSQL, and graph databases, as well as their underlying data models and storage techniques. They also gain practical experience in designing, implementing, and querying databases using popular query languages like SQL. Additionally, the module covers best practices for database optimization, security, and data integrity to ensure efficient and reliable data storage and retrieval.",  
-    "userId": "42"  
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"  
   },
 
   {
     "id": 6,
     "title": "Introducción a la Física",
     "description": "En este curso, los estudiantes aprenderán los conceptos fundamentales de la física, incluyendo mecánica clásica, termodinámica, electromagnetismo, óptica y física moderna. A través de lecciones teóricas y experimentos prácticos, adquirirán habilidades para analizar y resolver problemas en distintos campos de la física.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 7,
     "title": "Biología Molecular y Celular",
     "description": "Este curso introduce a los estudiantes a la biología molecular y celular, explorando la estructura y función de las células y sus componentes moleculares. Los temas incluyen la síntesis de proteínas, el metabolismo celular, la comunicación celular y la regulación génica. Los estudiantes aprenderán a aplicar técnicas experimentales y análisis de datos en la investigación biológica.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 8,
     "title": "Química Orgánica",
     "description": "Los estudiantes aprenderán los principios y conceptos básicos de la química orgánica, incluyendo la estructura y propiedades de compuestos orgánicos, reacciones químicas y mecanismos de reacción. A través de experimentos prácticos, adquirirán habilidades en síntesis orgánica, purificación y análisis de compuestos orgánicos.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 9,
     "title": "Matemáticas Avanzadas",
     "description": "En este curso, los estudiantes explorarán temas avanzados en matemáticas, incluyendo análisis real y complejo, álgebra abstracta, geometría diferencial y topología. A través de ejercicios y problemas, desarrollarán habilidades en razonamiento matemático, demostraciones y resolución de problemas complejos.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 10,
     "title": "Inteligencia Artificial",
     "description": "Este curso introduce a los estudiantes a los conceptos fundamentales y técnicas de la inteligencia artificial, incluyendo aprendizaje automático, procesamiento del lenguaje natural y visión por computadora. A través de proyectos prácticos, los estudiantes aprenderán a desarrollar y aplicar algoritmos de IA en diversas aplicaciones y contextos.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 11,
     "title": "Psicología Social",
     "description": "Los estudiantes aprenderán los conceptos básicos de la psicología social, incluyendo la percepción y cognición social, actitudes y persuasión, comportamiento grupal y toma de decisiones. A través de lecturas, discusiones y actividades prácticas, adquirirán habilidades en la investigación y aplicación de teorías psicológicas en contextos sociales y culturales.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 12,
     "title": "Filosofía de la Ciencia",
     "description": "En este curso, los estudiantes explorarán las cuestiones fundamentales en la filosofía de la ciencia, como la naturaleza de las teorías científicas, la justificación y la demarcación entre ciencia y no ciencia. A través de lecturas y discusiones, adquirirán habilidades en el análisis crítico y reflexión sobre el proceso científico y su impacto en la sociedad.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 13,
     "title": "Geología y Ciencias de la Tierra",
     "description": "En este curso, los estudiantes aprenderán sobre la estructura y composición de la Tierra, así como los procesos geológicos que han moldeado nuestro planeta a lo largo del tiempo. A través de lecciones teóricas y trabajo de campo, adquirirán habilidades en la identificación de rocas y minerales, interpretación de mapas geológicos y análisis de datos geofísicos.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 14,
     "title": "Astronomía y Astrofísica",
     "description": "Este curso introduce a los estudiantes a la astronomía y la astrofísica, explorando la estructura y evolución del universo, desde estrellas y galaxias hasta el espacio intergaláctico. A través de lecciones teóricas y observaciones prácticas, adquirirán habilidades en la interpretación de datos astronómicos y la aplicación de leyes físicas en el estudio del cosmos.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 15,
     "title": "Ecología y Conservación",
     "description": "En este curso, los estudiantes aprenderán sobre los conceptos fundamentales de la ecología y la conservación, incluyendo la estructura y función de los ecosistemas, la dinámica de poblaciones y comunidades, y los factores que influyen en la biodiversidad. A través de lecciones teóricas y trabajo de campo, adquirirán habilidades en la investigación ecológica y la aplicación de estrategias de conservación.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 16,
     "title": "Economía y Política",
     "description": "Los estudiantes aprenderán sobre los conceptos básicos de la economía y la política, incluyendo la oferta y la demanda, el mercado y la intervención gubernamental, así como los sistemas políticos y las teorías de poder. A través de lecturas, discusiones y análisis de casos, adquirirán habilidades en el análisis económico y político y la aplicación de teorías en contextos reales.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
 
   {
     "id": 17,
     "title": "Fisiología del Ejercicio",
     "description": "En este módulo, los estudiantes aprenderán los fundamentos de la fisiología del ejercicio, incluyendo el sistema cardiovascular, respiratorio y muscular. A través de experimentos prácticos y ejercicios, adquirirán habilidades en la medición y análisis de las respuestas fisiológicas al ejercicio físico.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 18,
     "title": "Sistemas Embebidos",
     "description": "En este módulo, los estudiantes aprenderán sobre los fundamentos de los sistemas embebidos, incluyendo la arquitectura, el diseño y la programación de microcontroladores. A través de ejercicios prácticos, adquirirán habilidades en el diseño y la implementación de sistemas embebidos para aplicaciones en tiempo real.",
-    "userId": "11"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 19,
     "title": "Neurociencia Cognitiva",
     "description": "En este módulo, los estudiantes aprenderán sobre los fundamentos de la neurociencia cognitiva, incluyendo el sistema nervioso, la percepción, la atención, la memoria y el lenguaje. A través de experimentos prácticos y ejercicios, adquirirán habilidades en la medición y análisis de las funciones cognitivas del cerebro.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 20,
     "title": "Desarrollo de Videojuegos",
     "description": "En este módulo, los estudiantes aprenderán sobre los fundamentos del desarrollo de videojuegos, incluyendo la programación, el diseño y la producción de videojuegos. A través de ejercicios prácticos, adquirirán habilidades en la creación de juegos interactivos y la aplicación de técnicas avanzadas de programación y diseño.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 21,
     "title": "Física Cuántica",
     "description": "En este módulo, los estudiantes aprenderán sobre los fundamentos de la física cuántica, incluyendo las propiedades de las partículas subatómicas, la mecánica cuántica y la teoría de la relatividad. A través de ejercicios prácticos, adquirirán habilidades en el análisis y la interpretación de los fenómenos cuánticos.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   },
   {
     "id": 22,
     "title": "Biomateriales",
     "description": "En este módulo, los estudiantes aprenderán sobre los fundamentos de los biomateriales, incluyendo las propiedades de los materiales biocompatibles, su procesamiento y sus aplicaciones en la medicina y la ingeniería. A través de experimentos prácticos y ejercicios, adquirirán habilidades en el diseño y la evaluación de biomateriales para aplicaciones médicas.",
-    "userId": "42"
+    "userId": "42",
+    "imageURL": "https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg"
   }
 ] 

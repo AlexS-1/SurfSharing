@@ -45,6 +45,11 @@ a {
     border-radius: 10px;
     margin: 10px;
 }
+
+.picture {
+  object-fit: cover;
+  border-radius: 10px;
+}
   
 .description {
     height: 50%;
