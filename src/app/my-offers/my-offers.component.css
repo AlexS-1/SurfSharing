@@ -46,6 +46,11 @@ a {
     margin: 10px;
 }
 
+.picture {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .description {
     height: 50%;
     background-color: #BCEEF0;

@@ -17,6 +17,7 @@
   
       <a [routerLink]="['/course-details', content.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="card">
         <div class="inner-box">
+          <img class="picture" src={{content.imageURL}} alt="productPicture" width="180" height="140">
         </div>
         <div class="description">
             {{content.title}}
