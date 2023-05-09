@@ -4,6 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppFetchDataTsService } from './app.fetch-data.ts.service';
 import { HttpClientModule } from '@angular/common/http';
 
+/// Firebase ///
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { environment } from '../environments/environment';
+////////////////
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -45,7 +53,11 @@ import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [AppFetchDataTsService],
   bootstrap: [AppComponent]
