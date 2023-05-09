@@ -90,7 +90,7 @@
 
 
     .rounded-rectangle {
-      background-color: #7496ED;
+      background-color: #14A8C2;
       border-radius:60px;
       height: 300px;
       width: 80vw;
@@ -113,7 +113,7 @@
     }
 
     button {
-      background-color: #ffa100;
+      background-color: #12879B;
       border: none;
       font-weight: bolder;
       font-size: 24px;
@@ -128,7 +128,7 @@
       cursor: pointer;
       transform: scale(1.05); /* Vergrößerungsfaktor */
       transition: transform 0.1s ease-in-out; /* Übergangseffekt */
-      background-color: #0066A1;
+      background-color: #BCEEF0;
       color: white;
     }
 
@@ -164,7 +164,7 @@
     }
 
     .rounded-rectangle {
-      background-color: #7496ED;
+      background-color: #14A8C2;
       border-radius: 60px;
       height: 300px;
       width: 80vw;
@@ -207,7 +207,7 @@
       width: 100%;
       max-width: 400px;
       margin: 0 auto 12px;
-      background-color: #ffa100;
+      background-color: #12879B;
       border: none;
       font-weight: bold;
       font-size: 18px;
@@ -227,7 +227,7 @@
       cursor: pointer;
       transform: scale(1.05);
       transition: transform 0.1s ease-in-out;
-      background-color: #0066A1;
+      background-color: #BCEEF0;
       color: white;
     }
 
