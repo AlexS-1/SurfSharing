@@ -7,9 +7,9 @@
     top: 0px;
     left: 0px;
     height: 100%;
-    background: #D8DCFF;
+    background: #BCEEF0;
     transition: width 0.3s ease-in-out; /* Change this line */
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .folded-in {

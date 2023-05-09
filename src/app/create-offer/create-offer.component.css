@@ -2,29 +2,29 @@
     margin: 12px 5%;
     padding: 12px 24px;
 }
-  
+
 form {
     margin: 20px auto;
 
 }
-  
+
 .form-group {
     margin: 20px auto;
     margin-bottom: 30px;
 }
-  
+
 .form-control {
     font-size: 16px;
     border-radius: 25px;
     padding: 10px;
-    background-color: #D8DCFF;
+    background-color: #BCEEF0;
     border: none;
     min-width: 300px;
     text-align: center;
 }
 
 button {
-    background-color: #ffa100;
+    background-color: #12879B;
     color: white;
     border: none;
     font-weight: bolder;
@@ -39,7 +39,7 @@ button:hover {
     cursor: pointer;
     transform: scale(1.05); /* Vergrößerungsfaktor */
     transition: transform 0.1s ease-in-out; /* Übergangseffekt */
-    background-color: #0066A1;
+    background-color: #BCEEF0;
     color: white;
 }
 

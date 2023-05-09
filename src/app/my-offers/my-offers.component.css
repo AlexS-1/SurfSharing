@@ -11,13 +11,13 @@
     gap: 20px;
     padding: 30px;
 }
-  
+
 .card {
     display: flex;
     flex-direction: column;
     width: 200px;
     height: 300px;
-    background-color: #D8DCFF;
+    background-color: #BCEEF0;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -28,16 +28,16 @@ a {
     text-decoration: none;
     color: black;
 }
-  
+
 .card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
       transition: transform 0.25s ease-in-out;
- 
+
   }
-  
+
 .inner-box {
     height: 50%;
-    background-color: #a7bcda;
+    background-color: #95bbbc;
 
     display: flex;
     justify-content: center;
@@ -45,10 +45,10 @@ a {
     border-radius: 10px;
     margin: 10px;
 }
-  
+
 .description {
     height: 50%;
-    background-color: #D8DCFF;
+    background-color: #BCEEF0;
     border-radius: 10px;
     display: flex;
     align-items:normal;

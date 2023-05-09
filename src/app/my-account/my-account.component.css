@@ -2,32 +2,31 @@
     margin: 12px 5%;
     padding: 12px 24px;
  }
- 
+
  .my-data {
     margin-top: 100px;
     border-radius: 10px;
-    background-color: #D8DCFF;
+    background-color: #BCEEF0;
     padding: 30px 8%;
     margin-bottom: 40px;
     padding-bottom: 40px;
  }
- 
+
  .my-evaluations-box {
     border-radius: 10px;
-    background-color: #D8DCFF;
+    background-color: #BCEEF0;
     padding: 35px 8%;
     padding-bottom:45px;
     margin-top: 35px;
     margin-bottom: 190px;
     box-sizing: border-box;
  }
- 
+
  .my-data h2, .my-evaluations-box h2 {
     margin-bottom: 25px;
     margin-top: 10px;
  }
- 
+
  .my-data-content p, .my-evaluations-content p {
     font-size: 16px;
  }
-  
