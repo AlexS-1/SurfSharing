@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## How to add Firebase to Project
+
+Make sure to have Firebase installed: `npm install firebase`
+Replace in `node_modules/@angular/fire/compat/firestore/interfaces.d.ts` the following lines to include `extends firebase.firestore.DocumentData` instead of
+`extends firebase.firestore.DocumentSnapshot in lines 13`
+`extends firebase.firestore.QueryDocumentSnapshot in lines 23`
+`extends firebase.firestore.QuerySnapshot in line 26`
+`extends firebase.firestore.DocumentChange in line 29
