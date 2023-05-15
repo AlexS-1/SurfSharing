@@ -27,7 +27,7 @@ const routes: Routes = [/* Add route info to route array*/
 { path: 'my-offers', component: MyOffersComponent, canActivate: [AuthGuardService], data: { roles: ['user', 'admin'] }},
 { path: 'log-in', component: LogInComponent },
 { path: 'forgot-password', component: ForgotPasswordComponent },
-{ path: 'create-offer', component: CreateOfferComponent },
+{ path: 'create-offer', component: CreateOfferComponent , canActivate: [AuthGuardService], data: { roles: ['user', 'admin'] }},
 { path: 'create-account', component: CreateAccountComponent },
 { path: 'browse-offers', component: BrowseOffersComponent },
 { path: 'offer-details/:id', component: OfferDetailsComponent }, // Änderung hier
