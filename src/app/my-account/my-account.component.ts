@@ -38,6 +38,7 @@ export class MyAccountComponent {
       this.user.surname = user.data()['surname'];
       this.user.email = user.data()['email'];
       this.user.dateOfBirth = user.data()['dateOfBirth'];
+      this.user.favOffers = user.data()['favOffers'];
     }
 
     const offers: Offer[] = await this.backend.getAllOffers();
