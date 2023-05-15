@@ -138,7 +138,6 @@ export class BackendDataService {
       }
       allOffers.push(offer);
     });
-    console.log(allOffers);
     return allOffers;
   }
 

@@ -99,6 +99,7 @@ export class OfferDetailsComponent {
   async addToUsersOffers() {
     const username = await this.authService.getCurrentUserName();
     this.backend.addToUsersOffers(username, this.offer.id);
+    this.router.navigate(['/my-saved-offers']);
   }
 
   async removeFromUserOffers() {
