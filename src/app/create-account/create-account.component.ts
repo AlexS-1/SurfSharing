@@ -60,7 +60,7 @@ export class CreateAccountComponent {
       email: this.email,
       password: this.password,
       id: "",
-      courses: []
+      favOffers: []
     }
     this.message = await this.backendDataService.addUser(user);
   }
