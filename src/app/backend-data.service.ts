@@ -108,6 +108,7 @@ export class BackendDataService {
   }
 
 //READ DATA
+
   // Retrieve user data from username and return data
   async getUserData(username: String) {
     const userDoc = await getDoc(doc(this.db, 'users', this.cyrb53(username.toString()).toString()));
