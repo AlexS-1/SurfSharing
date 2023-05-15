@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, DocumentData } from '@angular/fire/compat/firestore';
 import { doc, setDoc, getDoc, deleteDoc, query, where, getDocs, collection } from "firebase/firestore"
-import { User } from '../models/user';
-import { Evaluation } from '../models/evaluation';
-import { Course } from '../models/course';
-import { AuthService } from './auth-service.service';
+import { User } from './models/user';
+import { Evaluation } from './models/evaluation';
+import { Course } from './models/course';
+
 
 
 @Injectable({
@@ -13,10 +13,10 @@ import { AuthService } from './auth-service.service';
 
 export class BackendDataService {
 
-  constructor(private firestore: AngularFirestore) { 
+  constructor(private firestore: AngularFirestore) {
 
   }
-  
+
   db = this.firestore.firestore;
 
 //ADD DATA TO FIRESTORE
@@ -43,15 +43,15 @@ export class BackendDataService {
     }
     if (message != "User with this E-Mail already exists\n Please log in") {
       // Only add new user account if user is not already in the database and returen appropriate response
-      const data = { 
-        id: this.cyrb53(user.username.toString()), 
-        username: user.username, 
+      const data = {
+        id: this.cyrb53(user.username.toString()),
+        username: user.username,
         firstName: user.firstName,
-        surname: user.surname, 
-        email: user.email, 
-        dateOfBirth: user.dateOfBirth, 
-        password: user.password, 
-        courses: user.courses, 
+        surname: user.surname,
+        email: user.email,
+        dateOfBirth: user.dateOfBirth,
+        password: user.password,
+        courses: user.courses,
         profilePicture: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
       }
       // Creates a new doc with the userId as doc name
@@ -62,7 +62,7 @@ export class BackendDataService {
   }
 
   async addCourse(course: Course): Promise<string> {
-  
+
     //Check if course already exists
     const documentReference = doc(this.db, "courses", this.cyrb53(course.id.toString()).toString());
     const courseDoc = await getDoc(documentReference);
@@ -74,7 +74,7 @@ export class BackendDataService {
       description: course.description,
       createdByUserID: course.createdByUserID
   }
-  
+
     //Add data if it does not exist yet
     if(!courseDoc.exists()) {
       setDoc(documentReference, data);
@@ -104,7 +104,7 @@ export class BackendDataService {
     const courseDocument = await getDoc(courseReference);
     if(!courseDocument.exists()) {
       return "Please add the course first";
-    } else { 
+    } else {
       const reviewReference = doc(this.db, "evaluations", reviewReferenceID);
       const reviewDocument = await getDoc(reviewReference)
       if (reviewDocument.exists()) {
@@ -260,7 +260,7 @@ export class BackendDataService {
         }
       });
     }
-    
+
     return myCourseDocuments
   }
 
@@ -335,7 +335,7 @@ export class BackendDataService {
     h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
     h2  = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
     h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
-  
+
     return 4294967296 * (2097151 & h2) + (h1 >>> 0);
     };
 }

@@ -1,62 +1,38 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { BackendDataService } from './backend-data.service';
+import { getDocs } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  // Variable to hold userdata arry
-  private users: { id: number; email: string; password: string }[] = [];
+  constructor(
+    private router: Router,
+    private firestore: AngularFirestore,
+    private backendDataService: BackendDataService) {
 
-  // variables to hold login status and role
-  private loggedIn = false;
-  private userRole = 'visitor';
-
-  constructor(private http: HttpClient, private router: Router) {
-    // Perform loading of user data (only needed for json method)
-    this.loadUsers();
-
-    // Initialize login status vairables
-    this.loggedIn = !!sessionStorage.getItem('loggedInToken');
-
-    ////////////////
-    // ATTENTION: // This will read the local chached last state. For testing make sure to be logged out befor testing anything
-    ////////////////
-    this.userRole = sessionStorage.getItem('role') || 'visitor';      // ToDo: add verification to set logged in user state if token is still valid
   }
 
-  /////////////////////////////////
-  /// Validation of credentials ///
-  /////////////////////////////////
+  debugging = false
 
-  // load user credential data from json file
-  loadUsers() {
-    return this.http.get<{ users: { id: number; email: string; password: string }[] }>('../assets/userdata/userLogInData.json').subscribe((data) => {
-      this.users = data.users;
-      //console.log(data);            // for debugging
-      //console.log(this.users[0]);   // for debugging
-    });
-  }
+  db = this.firestore.firestore;
 
-  // Helper function to check entries in users[] loaded from database
-  private findUserByMailAndPw(userEntry : { id: number; email: string; password: string }, email: string, password: string){
-    return userEntry.email === email && userEntry.password === password ;
-  }
-
-  // Valifation function to be called by service user
+  // Valifation function to be called by login function
   // Returns the first match for email+password pair in user data array
-  private validateCredentials(email: string, password: string): boolean {
-    //const user = this.users.find((u) => u.email === email && u.password === password);
-    for (let i=0; i<this.users.length; i++){
-      if(this.findUserByMailAndPw(this.users[i], email, password)){
-        // console.log("found user");     // for debugging
-        // console.log(this.users[i]);    // for debugging
-        return true;
+  private async validateCredentials(email: string, password: string): Promise<boolean> {
+    var query = this.db.collection('users')
+      .where('email' , '==', email)
+      .where('password' , '==', password);
+    const querySnapshot = await getDocs(query);
+    let userFound = false;
+    querySnapshot.forEach((doc) => {
+      if(doc.exists()){
+        userFound = true;
       }
-    }
-    console.log("user not found in database");
-    return false;
+    });
+    return userFound;
   }
 
 
@@ -64,49 +40,116 @@ export class AuthService {
   /// Log-In handling ///
   ///////////////////////
 
-  login(email: string, password: string) : boolean{
-    let succssfulLookup = this.validateCredentials(email, password);
+  async login(email: string, password: string) : Promise<boolean>{
+    // check credentials with database
+    let succssfulLookup = await this.validateCredentials(email, password);
+
+    if (this.debugging) {
+      console.log('lookup state', succssfulLookup);         // for debugging
+    }
     // TODO: Implement login logic and set role in local storage
     let successfulState = false;
 
+    // On success enter login state in "loggedIn" collection and return docId as token,center email + time
+    let data = {
+      email,
+      timestamp: Date.now()
+    }
+
     if(succssfulLookup){
-      sessionStorage.setItem('loggedInToken', 'true');
-      successfulState = true;
-      if(true /* add variable to denominate user role*/){
-        sessionStorage.setItem('role', 'user');
-        this.userRole = 'user'
+      let token = sessionStorage.getItem('logInToken');
+      const tokenDoc = await this.backendDataService.getloggedInData(token);
+      if(tokenDoc != null){
+        if(!tokenDoc['exists']()){
+          let newEntryDoc = await this.db.collection('loggedIn').add(data);
+          // Add doc ID to session storage to be able to retrieve login state
+          sessionStorage.setItem('logInToken', newEntryDoc.id);
+        }else{
+          /*  No verification at this point that email or timestamp is valid
+              ToDo: implement checkup
+          */
+         if (this.debugging) {
+          console.log('Token exists');
+         }
+        }
+        successfulState = true;
+      }else{
+        let newEntryDoc = await this.db.collection('loggedIn').add(data);
+        // Add doc ID to session storage to be able to retrieve login state
+        sessionStorage.setItem('logInToken', newEntryDoc.id);
+        successfulState = true;
       }
     }
     if(succssfulLookup && successfulState){
-      console.log("Successfully logged in")  // for debugging
+      if (this.debugging) {
+        console.log("Successfully logged in")
+      }
       this.router.navigate(['/home']);
     }else{
-      console.log("Log in failed in auth-service.ts, logIn()")  // for debugging
+      if (this.debugging) {
+        console.log("Log in failed in auth-service.ts, logIn()")  // for debugging
+      }
     }
     return succssfulLookup && successfulState;
   }
 
-  // Function to perfrorm logout
+  // Function to perfrorm logout and clear session storage
   // Sets login state to false, removes user role
   logout() : boolean{
-    this.loggedIn = false;
-    this.userRole = 'visitor';
-    sessionStorage.setItem('loggedInToken', 'false');
-    sessionStorage.setItem('role', 'visitor');
-    console.log("Successfully logged out")  // for debugging
+    this.backendDataService.removeloggedInData(sessionStorage.getItem('logInToken'));
+    sessionStorage.removeItem('logInToken');
     return true;
   }
 
   // Getter for login status, logged in = true
-  isLoggedIn() : boolean{
-    return this.loggedIn || !!sessionStorage.getItem('loggedInToken');   // for debugging;
+  async isLoggedIn() : Promise<boolean>{
+    let token = sessionStorage.getItem('logInToken');
+    const tokenDoc = await this.backendDataService.getloggedInData(token);
+    if(tokenDoc != null){
+      if (tokenDoc['id'] === token) {
+        return true;
+      }
+    }
+    return false;
   }
 
-  // Getter for user role
-  // 'visitor' = not loged in, 'user' = logged in user, 'admin'= logged in user with admin rights
-  getUserRole() : string{
-    this.userRole = sessionStorage.getItem('role') as string;
-    return this.userRole;
+  // Getter for login status, logged in = true
+  async retrieveUserMail(token: String) : Promise<String| null>{
+    const tokenDoc = await this.backendDataService.getloggedInData(token);
+    if (this.debugging) {
+      console.log('tokenDoc: ', tokenDoc);
+    }
+    if(tokenDoc != null){
+      return tokenDoc['data']()['email'];
+    }
+    if (this.debugging) {
+      console.log('returning null');      // for debugging
+    }
+    return null;
+  }
+
+  // Returns "" on failure
+  async getCurrentUserName(): Promise<string>{
+    let userToken = sessionStorage.getItem('logInToken');
+    if (this.debugging) {
+      console.log(userToken);
+    }
+    if(userToken != null){
+      let retrUserMail = await this.retrieveUserMail(userToken);
+      if (this.debugging) {
+        console.log('mail: ', retrUserMail);
+      }
+      if (retrUserMail != null) {
+        let uName = await this.backendDataService.getUserNameByMail(retrUserMail.toString());
+        if (this.debugging) {
+          console.log('uName: ' , uName);
+        }
+        if(uName != null){
+          return uName;
+        }
+      }
+    }
+    return "";
   }
 }
 

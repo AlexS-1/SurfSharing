@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, finalize } from 'rxjs';
-import { FileUpload } from '../models/file-upload';
+import { FileUpload } from './models/file-upload';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { BackendDataService } from './backend-data.service';
@@ -13,8 +13,8 @@ export class FileUploaderService {
   private basePath = '/uploads';
 
   constructor(
-    private storage: AngularFireStorage, 
-    private fdb: AngularFireDatabase, 
+    private storage: AngularFireStorage,
+    private fdb: AngularFireDatabase,
     private backend: BackendDataService,
     private authService: AuthService
     ){}

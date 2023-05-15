@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { AuthService } from './../auth-service.service';
+import { BackendDataService } from '../backend-data.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-create-account',
@@ -8,28 +8,61 @@ import { AuthService } from './../auth-service.service';
   styleUrls: ['./create-account.component.css']
 })
 export class CreateAccountComponent {
-  first_name = 'User';
+  firstName = 'User';
   surname = 'Lastname';
   username = 'user1';
-  date_of_birth = '';
+  dateOfBirth = '';
   email = 'user1@example.com';
-  password = 'UserPassword@1';
-  repeat_password = 'UserPassword@2';
+  password = 'UserPassword@!1';
+  repeatedPassword = 'UserPassword@!2';
 
+  //Output to form
+  message = '';
+
+  //Other variables
   passwordValidity = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(private backendDataService: BackendDataService) {
 
-  checkValidityPasswords(password: any) {
-    if (this.password == this.repeat_password) {
-      this.passwordValidity = true;
-    } else {
-      this.passwordValidity = false;
-    }
-    
   }
 
-  onSubmit() {
-    //TODO Submit information to .JSON
+  checkValidityPassword(password: any) {
+    this.message = "The password must match the following criteria: ";
+    if(!this.password.match(".*\\d.*"))
+      this.message += '\n- at least one number';
+    if(!this.password.match(".*[a-z].*"))
+      this.message += '\n- at least a lowercase letter';
+    if(!this.password.match(".*[A-Z].*"))
+      this.message += '\n- at least an uppercase letter';
+    if(!this.password.match("(?=.*[@$!%*?&])"))
+      this.message += '\n- at least a special character such as: @$!%*?&';
+    if ((!(/^(.{8,32})$/.test(this.password)))) {
+      this.message += '\n- the password must between 8 and 32 characters'
+    }
+   }
+
+  checkMatchingPasswords(password: any) {
+    if (this.password == this.repeatedPassword) {
+      this.passwordValidity = true;
+      this.message = ''
+    } else {
+      this.passwordValidity = false;
+      this.message = 'Please enter matching passwords'
+    }
+  }
+
+  async onSubmit() {
+    const user: User = {
+      username: this.username,
+      firstName: this.firstName,
+      surname: this.surname,
+      dateOfBirth: this.dateOfBirth,
+      email: this.email,
+      password: this.password,
+      profilePicture: "",
+      id: "",
+      courses: []
+    }
+    this.message = await this.backendDataService.addUser(user);
   }
 }
