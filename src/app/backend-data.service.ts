@@ -22,7 +22,7 @@ export class BackendDataService {
 
   // Receives the users data and enters it to the firebase realtime database
   // Enter new user only if it does not already exist
-  // INFO: This function adds a default picture and an empty course list to the useres data
+  // INFO: This function adds a default picture and an empty offers list to the useres data
   async addUser(user: User): Promise<string> {
     let message = "";
 
@@ -61,7 +61,7 @@ export class BackendDataService {
 
   async addOffer(offer: Offer): Promise<string> {
 
-    //Check if course already exists
+    //Check if offer already exists
     const documentID: string = this.cyrb53(offer.createdByUserID.toString() + Date.now().toString()).toString()
     const documentReference = doc(this.db, "offers", documentID);
     const offerDoc = await getDoc(documentReference);
@@ -84,14 +84,14 @@ export class BackendDataService {
     return "Offer already exists"
   }
 
-  async addToUsersOffers(username: string, courseID: number) {
+  async addToUsersOffers(username: string, offerID: number) {
     const userID = this.cyrb53(username).toString();
     const userReference = doc(this.db, "users", userID);
     let userData = await this.getUserData(username);
     if (userData.exists()) {
-        let userOffers: number[] = userData.data()['courses'];
-        if (!userOffers.includes(courseID)) {
-            userOffers.push(courseID);
+        let userOffers: number[] = userData.data()['favOffers'];
+        if (!userOffers.includes(offerID)) {
+            userOffers.push(offerID);
         }
         const data: User = {
             id: userData.data()['id'] ,
@@ -117,11 +117,11 @@ export class BackendDataService {
   // Retrieve user data from username and return data
   // Rerurns doc.data() on success or empty data ( {} ) on failure
   async getOfferData(id: number) {
-    const courseDocument = await getDoc(doc(this.db, 'courses', this.cyrb53(id.toString()).toString()));
-    return courseDocument
+    const offerDocument = await getDoc(doc(this.db, 'offers', this.cyrb53(id.toString()).toString()));
+    return offerDocument
   }
 
-  // Get all courses in database for browse-courses view
+  // Get all offers in database for browse-offers view
   async getAllOffers() {
     const offersQuery = query(collection(this.db, "offers"));
     const offersCollection = await getDocs(offersQuery);
@@ -161,7 +161,7 @@ export class BackendDataService {
     return allusers;
   }
 
-  // Retrieve course data
+  // Retrieve offers data
   async getMyOffers(offers: number[]) {
     let myOfferDocuments: Offer[] = [];
     const collectionQuery = query(collection(this.db, 'offers'));
@@ -215,15 +215,15 @@ export class BackendDataService {
     return true;
   }
 
-  // Remove course from user selected course
-  async removeFromUserOffers(username: string, courseID: number) {
+  // Remove offer from user selected offer
+  async removeFromUserOffers(username: string, offerID: number) {
     const userID = this.cyrb53(username).toString();
     const userReference = doc(this.db, "users", userID);
     let userData = await this.getUserData(username);
     if (userData.exists()) {
-        let userOffers: number[] = userData.data()['courses'];
-        if (userOffers.includes(courseID)) {
-          const index = userOffers.indexOf(courseID, 0);
+        let userOffers: number[] = userData.data()['offers'];
+        if (userOffers.includes(offerID)) {
+          const index = userOffers.indexOf(offerID, 0);
           if (index > -1) {
              userOffers.splice(index, 1);
           }
