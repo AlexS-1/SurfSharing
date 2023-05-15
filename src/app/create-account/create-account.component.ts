@@ -59,7 +59,6 @@ export class CreateAccountComponent {
       dateOfBirth: this.dateOfBirth,
       email: this.email,
       password: this.password,
-      profilePicture: "",
       id: "",
       courses: []
     }
