@@ -25,13 +25,10 @@
 
     }
 
-
-
     h1 {
         font-size: 52px;
         font-weight: bolder;
     }
-
 
     .btns {
         margin: auto;
@@ -57,7 +54,6 @@
         color: white;
     }
 
-
     p {
         max-width: 1000px;
     }
@@ -69,6 +65,11 @@
         padding: 12px 4%;
         padding-bottom: 18px;
         margin: 24px 0px;
+    }
+
+    img {
+        width: 500px;
+        object-fit: cover;
     }
 }
 
