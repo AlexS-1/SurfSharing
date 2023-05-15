@@ -37,7 +37,7 @@ export class OfferDetailsComponent {
   }
 
   //Help variables
-  toggleMyOffers: string = "Operation my Courses"
+  toggleMyOffers: string = "Operation my Offers"
   debugging = false;
 
   ngOnInit() {
@@ -65,32 +65,32 @@ export class OfferDetailsComponent {
       }
   }
 
-  async checkLogIn(currentCourseID: number) {
+  async checkLogIn(currentOfferID: number) {
     let loggedIn:boolean  = await this.authService.isLoggedIn();
     if (loggedIn) {
       const getCurrentUserName = await this.authService.getCurrentUserName()
       const currentUserData = await this.backend.getUserData(getCurrentUserName);
       if (currentUserData.exists()) {
-        const loggedInUserCourses: number[] = currentUserData.data()['courses']
-        if (loggedInUserCourses.includes(currentCourseID)) {
-          this.toggleMyOffers = "- Remove from my Courses"
+        const loggedInUserCourses: number[] = currentUserData.data()['favOffers']
+        if (loggedInUserCourses.includes(currentOfferID)) {
+          this.toggleMyOffers = "- Remove from my Offers"
         } else {
-          this.toggleMyOffers = "+ Add to my Courses"
+          this.toggleMyOffers = "+ Add to my Offers"
         }
       }
     } else {
-      this.toggleMyOffers = "Log in to add to my Courses"
+      this.toggleMyOffers = "Log in to add to my Offers"
     }
   }
 
   async toggleUserOffers() {
     let loggedIn: boolean = await this.authService.isLoggedIn();
-    if (loggedIn && this.toggleMyOffers == "+ Add to my Courses") {
+    if (loggedIn && this.toggleMyOffers == "+ Add to my Offers") {
       this.addToUsersOffers()
-      this.toggleMyOffers = "- Remove from my Courses";
-    } else if (loggedIn && this.toggleMyOffers == "- Remove from my Courses") {
+      this.toggleMyOffers = "- Remove from my Offers";
+    } else if (loggedIn && this.toggleMyOffers == "- Remove from my Offers") {
       this.removeFromUserOffers()
-      this.toggleMyOffers = "+ Add to my Courses";
+      this.toggleMyOffers = "+ Add to my Offers";
     } else {
       this.router.navigateByUrl("/log-in")
     }
