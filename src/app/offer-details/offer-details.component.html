@@ -1,18 +1,20 @@
 <article class="my-courses">
-    <section class="grid-container" *ngIf="dataEntry">
-        <h1>{{ dataEntry.title }}</h1>
+    <section class="grid-container" *ngIf="offer">
+        <h1>{{ offer.title }}</h1>
         <div class="btns">
-            <button>
-                + Add to my Offers
+            <button (click)="toggleUserOffers()" class="btn1" [ngClass]="toggleMyOffers == 'Log in to add to my Offers' ? 'log-in' : 'normal'">
+                {{ toggleMyOffers }}
             </button>
             <a href="book-offer" routerLink="/book-offer" routerLinkActive="active" ariaCurrentWhenActive="page">
                 <button class="review">
                     Book Offer
-                </button>
+                </button> 
             </a>
         </div>
     </section>
-    <div class="course-description" *ngIf="dataEntry">
-        <p>{{ dataEntry.description }}</p>
+    <div class="course-description" *ngIf="offer">
+        <img src={{offer.imageURL}} alt="image of surfboard for this offer">
+        <p>{{ offer.pricePH }}</p>
+        <p>{{ offer.description }}</p>
     </div>
 </article>
