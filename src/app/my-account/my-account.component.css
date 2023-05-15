@@ -30,3 +30,66 @@
  .my-data-content p, .my-offers-content p {
     font-size: 16px;
  }
+
+ .card-container{
+   float: none;
+   justify-content: center;
+ }
+
+
+ .card {
+   display: flex;
+   flex-direction: column;
+   width: 200px;
+   height: 300px;
+   background-color: #BCEEF0;
+   border-radius: 10px;
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+   overflow: hidden;
+   margin: 20px;
+ }
+
+ a {
+   text-decoration: none;
+   color: black;
+ }
+
+ .card:hover {
+   transform: scale(1.05);
+   transition: transform 0.25s ease-in-out;
+ }
+
+ .inner-box {
+   height: 50%;
+   background-color: #a7bcda;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   margin: 10px;
+ }
+
+ .picture {
+   height: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+ }
+
+ .details {
+   height: 50%;
+ }
+
+ .title {
+   display: flex;
+   align-items: normal;
+   text-align: left;
+   padding: 0px 18px;
+ }
+
+ .price {
+   display: flex;
+   align-items: normal;
+   text-align: left;
+   padding: 8px 18px;
+ }
+

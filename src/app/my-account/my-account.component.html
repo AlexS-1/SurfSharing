@@ -9,9 +9,22 @@
           <p>Number of Evaluations: --</p>
         </div>
     </section>
-    <section class="my-offers-box">
+    <section class="my-offers-box card-container" *ngFor="let offer of offers">
         <h2>My created Offers</h2>
         <div class="my-offers-content">
+          <a [routerLink]="['/offer-details', offer.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="card">
+            <div class="inner-box">
+              <img class="picture" src={{offer.imageURL}} alt="productPicture" width="180" height="140">
+            </div>
+            <div class="details">
+              <div class="title">
+                  {{offer.title}}
+              </div>
+              <div class="price">
+                  {{offer.pricePH}} €/h
+              </div>
+            </div>
+          </a>
         </div>
     </section>
 </article>  
