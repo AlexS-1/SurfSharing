@@ -163,7 +163,7 @@ export class BackendDataService {
   }
 
   // Retrieve offers data
-  async getMyOffers(offers: number[]) {
+  async getMyOffers(offers: number[]): Promise<Offer[]>{
     let myOfferDocuments: Offer[] = [];
     const collectionQuery = query(collection(this.db, 'offers'));
     const collectionSnapshot = await getDocs(collectionQuery)
@@ -175,6 +175,7 @@ export class BackendDataService {
             title: doc.data()['title'],
             description: doc.data()['description'],
             createdByUserID: doc.data()['createdByUserID'],
+            imageURL: doc.data()['imageURL'],
             pricePH: doc.data()['pricePH']
           }
           myOfferDocuments.push(offer);

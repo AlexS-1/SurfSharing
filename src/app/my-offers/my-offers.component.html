@@ -1,11 +1,16 @@
 <article class="my-courses">
     <h1>My Favourite Offers</h1>
     <section class="card-container">
-      <a *ngFor="let content of contentData" [routerLink]="['/offer-details', content.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="card">
+      <a *ngFor="let offer of offers" [routerLink]="['/offer-details', offer.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="card">
         <div class="inner-box">
-          <img class="picture" src={{content.imageURL}} alt="productPicture" width="180" height="140">
+          <img class="picture" src={{offer.imageURL}} alt="productPicture" width="180" height="140">
         </div>
-        <div class="description">{{ content.title }}</div>
+        <div class="title">
+          {{ offer.title }}
+        </div>
+        <div class="price">
+          {{offer.pricePH}} €/h
+      </div>
       </a>
     </section>
 </article>
