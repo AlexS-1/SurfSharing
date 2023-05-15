@@ -3,10 +3,10 @@
     <section class="my-data">
       <h2>My Data</h2>
         <div class="my-data-content">
-          <p>Name: -----</p>
-          <p>Date of Birth: -----</p>
-          <p>Buddy since: -----</p>
-          <p>Number of Evaluations: --</p>
+          <p>Name: {{user.firstName}} {{user.surname}}</p>
+          <p>Date of Birth: {{user.dateOfBirth}}</p>
+          <p>E-Mail: {{user.email}}</p>
+          <p>Number of Offers: {{offers.length}}</p>
         </div>
     </section>
     <section class="my-offers-box card-container" *ngFor="let offer of offers">
