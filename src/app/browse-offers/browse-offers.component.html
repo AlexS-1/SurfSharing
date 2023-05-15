@@ -13,7 +13,7 @@
         </datalist>
       -->
     </div>
-    <section class="card-container" *ngFor="let offer of offers">
+    <section class="card-container" *ngFor="let offer of offers; let i = index" [ngClass]="i + 1 == offers.length ? 'last': 'normal'">
       <a [routerLink]="['/offer-details', offer.id]" routerLinkActive="active" ariaCurrentWhenActive="page" class="card">
         <div class="inner-box">
           <img class="picture" src={{offer.imageURL}} alt="productPicture" width="180" height="140">
