@@ -13,9 +13,7 @@ export class MyOffersComponent {
   offerIDs: number[] = [];
   selectedCourseIds = [1, 2]; // Liste der ausgewählten Kurs-IDs
 
-  constructor(private backend: BackendDataService, private auth: AuthService) {
-
-  }
+  constructor(private backend: BackendDataService, private auth: AuthService) { }
 
   ngAfterViewInit(): void {
     // Call loading function
@@ -30,6 +28,5 @@ export class MyOffersComponent {
       this.offerIDs = currentUser.data()['favOffers'];
     }
     this.offers =  await this.backend.getMyOffers(this.offerIDs);
-    console.log(this.offers);
   }
 }
