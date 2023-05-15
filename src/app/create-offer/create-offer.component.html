@@ -1,15 +1,16 @@
 <section class="create-course-form">
     <h1>Add Your Offer!</h1>
-    <form action="#">
+    <form (submit)="addOffer()">
       <div class="form-group">
-        <input type="number" class="form-control" placeholder="Price" required="required">
+        <input type="number" class="form-control" placeholder="Price" name="offerPrice" [(ngModel)]="offerPrice" required="required">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Offer Title" required="required">
+        <input type="text" class="form-control" placeholder="Offer Title" name="offerTitle" [(ngModel)]="offerTitle" required="required">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Offer Description">
+        <input type="text" class="form-control" placeholder="Offer Description" name="offerDescription" [(ngModel)]="offerDescription">
       </div>
-        <button>+ Add Offer</button>
+      <app-image-upload-form class="upload-form" (pictureChanged)="updateOfferInformation()"></app-image-upload-form>
+      <button type="submit">+ Add Offer</button>
     </form>
   </section>

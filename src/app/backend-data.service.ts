@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, DocumentData } from '@angular/fire/compat/firestore';
-import { doc, setDoc, getDoc, deleteDoc, query, where, getDocs, collection } from "firebase/firestore"
+import { doc, setDoc, getDoc, deleteDoc, query, where, getDocs, collection, documentId } from "firebase/firestore"
 import { User } from './models/user';
 import { Evaluation } from './models/evaluation';
-import { Course } from './models/course';
+import { Offer } from './models/offer';
 
 
 
@@ -61,27 +61,29 @@ export class BackendDataService {
     return message;
   }
 
-  async addCourse(course: Course): Promise<string> {
+  async addOffer(offer: Offer): Promise<string> {
 
     //Check if course already exists
-    const documentReference = doc(this.db, "courses", this.cyrb53(course.id.toString()).toString());
-    const courseDoc = await getDoc(documentReference);
+    const documentID: string = this.cyrb53(offer.createdByUserID.toString() + Date.now().toString()).toString()
+    const documentReference = doc(this.db, "offers", documentID);
+    const offerDoc = await getDoc(documentReference);
 
     //Create data
-    const data: Course = {
-      id: course.id,
-      title: course.title,
-      description: course.description,
-      createdByUserID: course.createdByUserID
-  }
-
-    //Add data if it does not exist yet
-    if(!courseDoc.exists()) {
-      setDoc(documentReference, data);
-      return "Course added"
+    const data: Offer = {
+      id: offer.id,
+      title: offer.title,
+      description: offer.description,
+      createdByUserID: offer.createdByUserID,
+      pricePH: offer.pricePH,
+      imageURL: offer.imageURL
     }
 
-    return "Course already exists"
+    //Add data if it does not exist yet
+    if(!offerDoc.exists()) {
+      setDoc(documentReference, data);
+      return "Offer added"
+    }
+    return "Offer already exists"
   }
 
   async addEvaluation(evaluation: Evaluation): Promise<string> {
@@ -139,9 +141,9 @@ export class BackendDataService {
     }
   }
 
-  async setProfilePicture(username: string, url: string) {
+  /*async setOfferPicture(username: string, url: string) {
     const userID = this.cyrb53(username).toString();
-    const userReference = doc(this.db, "users", userID);
+    const offerReference = doc(this.db, "offers", userID);
     let userData = await this.getUserData(username);
     if (userData.exists()) {
         const data: User = {
@@ -157,7 +159,7 @@ export class BackendDataService {
         }
         await setDoc(userReference, data);
     }
-  }
+  }*/
 
 
 //READ DATA
@@ -187,6 +189,8 @@ export class BackendDataService {
     return querySnapshot;
   }
 
+  /*
+  TODO: Change to offers
   // Get all courses in database for browse-courses view
   async getAllCourses() {
     const coursesQuery = query(collection(this.db, "courses"));
@@ -203,6 +207,7 @@ export class BackendDataService {
     });
     return allCourses;
   }
+  */
 
   async getAllEvaluations() {
     const evaluationQuery = query(collection(this.db, "evaluations"));
@@ -243,6 +248,7 @@ export class BackendDataService {
   }
 
   // Retrieve course data
+  /*TODO: Change to offers
   async getMyCoursesByCourseIDs(courses: number[]) {
     let myCourseDocuments: Course[] = [];
     const collectionQuery = query(collection(this.db, 'courses'));
@@ -263,6 +269,7 @@ export class BackendDataService {
 
     return myCourseDocuments
   }
+  */
 
   // Retrieve login data from token return tokenDoc
   async getloggedInData(id: String| null): Promise<DocumentData|null>{

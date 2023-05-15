@@ -11,6 +11,7 @@ import { AuthService } from './auth-service.service';
 })
 export class FileUploaderService {
   private basePath = '/uploads';
+  public currURL = "";
 
   constructor(
     private storage: AngularFireStorage,
@@ -19,16 +20,17 @@ export class FileUploaderService {
     private authService: AuthService
     ){}
 
+
+    
   pushFileToStorage(fileUpload: FileUpload): Observable<number | undefined> {
     const filePath = `${this.basePath}/${fileUpload.file.name}`;
     const storageRef = this.storage.ref(filePath);
     const uploadTask = this.storage.upload(filePath, fileUpload.file);
     uploadTask.snapshotChanges().pipe(finalize(() => {
       storageRef.getDownloadURL().subscribe(async downloadURL => {
+        this.currURL = downloadURL;
         fileUpload.url = downloadURL;
         fileUpload.name = fileUpload.file.name;
-        const username = await this.authService.getCurrentUserName();
-        this.backend.setProfilePicture(username, fileUpload.url);
         this.saveFileData(fileUpload);
       });
     })).subscribe();

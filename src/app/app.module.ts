@@ -29,6 +29,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BookOfferComponent } from './book-offer/book-offer.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
+import { ImageUploadFormComponent } from './image-upload-form/image-upload-form.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
     NavBarComponent,
     BookOfferComponent,
     SideBarComponent,
-    TermsOfUseComponent
+    TermsOfUseComponent,
+    ImageUploadFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,8 @@
-export interface Course {
+export interface Offer {
     id: number;
     title: string;
     description: string;
     createdByUserID: number;
-    averageRating?: number;
+    imageURL?: string;
+    pricePH: number;
 }
