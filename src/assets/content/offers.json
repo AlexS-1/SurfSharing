@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Beginner Soft-Top Surfboard",
     "description": "A great beginner board with a soft top and rounded edges.",
-    "userID": 3,
+    "createdByUserID": 3,
     "imageURL": "https://www.upsurfboard.com/wp-content/uploads/Tabla-de-surf-UP-SIMPLY-UP-7´0-2022-Azul-Softboard-scaled.jpg",
     "pricePH": 12.50
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Beginner Soft-Top Surfboard",
     "description": "A great beginner board with a soft top and rounded edges.",
-    "userID": 3,
+    "createdByUserID": 3,
     "imageURL": "https://www.upsurfboard.com/wp-content/uploads/Tabla-de-surf-UP-SIMPLY-UP-7´0-2022-Azul-Softboard-scaled.jpg",
     "pricePH": 12.50
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "title": "Longboard",
     "description": "A classic longboard for all types of waves.",
-    "userID": 2,
+    "createdByUserID": 2,
     "imageURL": "https://contents.mediadecathlon.com/p2433489/k$9f517be41998e6cd538ee761d6803ab6/sq/tabla-surf-longboard-epoxy-sobre-espuma-eps-9-67l-21-quilla-central-8-900.jpg?format=auto&f=800x0",
     "pricePH": 15.00
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Performance Shortboard",
     "description": "A high-performance shortboard for experienced surfers.",
-    "userID": 1,
+    "createdByUserID": 1,
     "imageURL": "https://cdn.shopify.com/s/files/1/0586/8565/3164/products/115191_d103154e41f7b3bf1e7688cfe2b13ef918f6dd60_1690x.png?v=1673822955",
     "pricePH": 20.00
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "title": "Funboard",
     "description": "A versatile board for all types of surfers.",
-    "userID": 3,
+    "createdByUserID": 3,
     "imageURL": "https://www.konasurfco.com/media/catalog/product/cache/1/image/500x500/9df78eab33525d08d6e5fb8d27136e95/S/S/SSTHE55_Red-450.jpg",
     "pricePH": 14.00
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "title": "Fish",
     "description": "A short, wide board with a swallowtail for increased maneuverability.",
-    "userID": 2,
+    "createdByUserID": 2,
     "imageURL": "https://cdn.shopify.com/s/files/1/2638/0008/products/flyer_fish_surfboard_hastings_street_noosa_1042x.png?v=1663307519",
     "pricePH": 16.00
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "title": "Hybrid Shortboard",
     "description": "A combination of a shortboard and a fish for increased speed and maneuverability.",
-    "userID": 1,
+    "createdByUserID": 1,
     "imageURL": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCA8RDw8PDw8PEQ8REhAREREPDxEPEA8PGBQcGRgUGBgcIS4lHB4sHxgYJjgmKy80NTU1GiQ7QEgzPy40NTEBDAwMDw8PERAPEDErGB0xNjE/MT8/PzExMT80MTE/MTExNDExMTExMTExND8/MTExMTExMT8xMTExMTExMTExMf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIEBgcFAwj/xABIEAACAQIBBQkNBQgBBQEAAAAAAQIDBBEFBhIhMSI0QVFxc5GhsgcTJDNSYXJ0gbGzwdEjY4KSohQyQmKDtMLho0RThMPiJf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABQf/aAAwDAQACEQMRAD8AoiQqQJD0gBIekIkPSAEiXDJ9eVJ1o0puklNuai9HRg4qcuROcU3wYnQzUyDO/uo0VjGlDCdaa/hp47F/M9i9r4DY1a0qdza0YQhGlG0u4RgktBQ75brDDhAwZIekWjPnNr9irqpRj4LWb0F/2p7XT5OFebFcBWEgFSHJAkOSAVIekJFD0gPW2ouc4U01FznCClLHRi5SSxeHBrH3NtOlUnSmtGcJShJedP3HksVrWprWnxMtefFBSna3kVubqjGUsPLjFPF/hkvygVdIckCQ5IBUh6QiQ+KAWKHJAkPSAEh6QJFlzUyIq0v2irHGjB4Ri1qqTXHxxXW9XGBxHZVVFzdOago05ttbITclCT8zcJa/N50eSRpkIJ3lzFpNO2tE01imnUudTRUM48jfs01OC+wm9zw6E9uhycX+gOKkOSBIekAJD0gSHpAJgAuAAZykPSESHpACQqBItGYGR/2rKEHJY0rfCtPHY3F7iPtlg+SLA0vMnISsrOEZRwr1cKld8Km1qhyRWrlxfCdOsvDbf1a7+Jbk8hVt+W/q9126BQzLeTIXdtVtqmycdzLhhNa4yXI8DC7m3nSqTpVI6M6c5QkuKSeD9h9CGad07JChUp3sFuamFOrh/wByK3EvbFNfhQooaQ5IEh0UQKkPSESHpAKkXi/pd+yDbVNsqDg/Ypum+proKSkaHm7S77kStS2vRuYr0sXJdbQGfJD0hIj0gFSHpCRQ9IBUh6QiQ5ICXkyylcVoUY/xvW/JgtcpdBqVtQhThCnBaMIJRiuJIrGY9howncyWub73D0IvdP2vV+EthRz6O/bn1az+JcEi+tYVqc6U1uZrDHhi+CS86ZHo7+uPVbT4tydADLri3lTnOnNYShJxf15HtGpFnzxsdcLmK27ifL/C/eugrSRAqQ5IRIekAYAOwADOEhyQJCpAKkbB3Mcm96sHXkt3czctmtUo7mC6pS/EZJQoynOEILGdSUYRXHKTwXWz6HsbWNGjSox/dpwjTjyRil8hB7kGtvu35m6X66P0JxDr76tubuffTKJhzM4snK6s69DBaUoNwx4Ksd1DrS6TpgB8+Jcaw8z2ockdnO2x7xlC5glhGU++Q4tGa0tXtbXsOSkQCQ9IRIekAJGkdzyWNnVi9irTXscIP5szlI0Hucv7C4X3sX0wX0AotaloTnB7YTlD8ra+QRR0Mv0tC9uo/ezl+Z6XzIKQAkPSBIekAJHpTpuTjGKxlJqKXG28ENSO1mra98vKeK3NPGo/w7P1OIF+sbaNKlTpR2U4RjytLW/a8WSAAo59Pf1bz2tt1Va31OgQILw2p6tR+JU+pPAjZRtVWo1Kb/ii8PNJa4vpSM50WtT1NamuJmnlDy7bd7uaiS3Mmqi5Ja314ijnJD0gSHpECYALgAGcJDkgSHxQFgzFtO+5TtU1jGEpVpebQi5Rf5tE28y7uUWuNxdVmv3KcIJ+ec8X2DUSwBCuN9W3N3H+BNINxvq29G4XVH6ATgFADOe6faYVLa4S/fhOlJ+eL0o9qXQUhI1TuhW2nk+U8NdKpTmuRvQfbMtSIFSFSBIekAJF87nL3FyuKdJ9Kl9CjJF27nT13a9XfbA4+eFPRyhX/m0JfoS+Rx0iyZ9wwvU/KpQfRKSK6kAqQ5IRIekAqRccxrfVXqvjhTXs3T98SoJGh5pUdCzg+Gcpzf5sF1JAdoAA0IMd9z9Xh8SZOIK32/V4/Ef1JxAFYzuoa6NT0qb96/yLOcnOWlpWsnwwlCXXg/eBTEhyQiQ9IgMBRcAAzeKHpCJDkgNU7ldDRs69ThnXa5YwhH5yZeCsdz2loZLt3wzlWn01ZJdSRZsShSFc75tuSv2Yk3EhXO+Lb+v2EBNAAxA5ucNDvlldQwxboza9KMdJdaRjEUbtUipRcXskmnyPUYZoOLcXti8HyrUwBIekIkPiiBYouXc9e7uVxwpPolL6lPSLdmB4649CHaAM/wCHhNGXHSw6Jv6lXSLd3QIbu1f8tRdcfqVNIASHpAkPSAEjUMlU9C2t4cKpwx5dFY9ZmUIaTUeNpdLwNXisElxJIsCgAFRB/wCs/wDH/wDYTiC9+L1eXxETiKCNlGnp0K0eF054cuGrrJIklimuMDOoo9IoWUNGUo8Ta6HgOSIEwAdgIBm6Q5IRIeBuGaUNHJ1kuOhTl+aOl8zrkHI0NC1toeTRorogicUBDud8W39bsImEK68fbf1uwBNAAARmMZVp6F1cw8mtWS5NN4GzMyPOaGF/dL7xvpSfzA5iQ9IRIekQKkWvMLx9fm12kVZItOYm+avNf5xAnZ/x1Wr89RdKj9CnJF2z9j9nbv7yS6Y/6KWkAqQ9IRIckBJydDSr0Y8dSn20aeZxkSON1b85F9Gs0csAAAVEGW/IerT+JD6k4gz35T9WrfEp/UnEUAABFHvoYVqq+8n2jxSJmV44XNX0k+mKIqRFJgKOwADNUhzWp8jFSFa1PkYG+WUcKVNcVOC/SiQeNv8AuQ9GPuPQocQ7nx9ty1ewSiJdeOtfSq/DYE0aAADMrzthhlC587g/+OJqbMxzxX/6Fbkp9iIHESHpCJD0iASLNmNvmrzMu3AraRZMyN81OZl24AdfPpfYUH95/hIpaRd8+F4NR51diZSUgFSHpCJD0gOjm/Hwuh6T7LNCKBm8vC6PLLsMv5YAAAIg1N+UvV7j4lEnEGpv2j6tdfEoE4AAAAqeW4+Ez8+h2UQUjoZcXhEvRh7iEkRSYAOwADNkhzWp8jEih+GpgbxbvGEHxxi+o9CPYSxo0nx04P8ASiQUKQ7rx1r6VX4bJZEuvHWvp1PhSAlgAADMzzw3/W5KfYRpjMyzseN/X/Av0RA46Q5IRIekQKkWPMvfM+an24leSLDmZvmXNT7UQO1ntvalz0exMpSRdc9d7Uuej2JlMSAVIekIkOSA6Ob++6PpS7DL+UHImq6oen70y/FgAACogVd+2/q138S3J5Arb9t/Vrz4lsTyKAAAir5b3xL0Y+4hJE7LO+J8kOyQkiKMAFADN0hyQJD0gNpyLPStbaXHRpP9CJpy82J6VhaPiowj+VaPyOoUKRLrx1rzlT4MyURbrxttzk/gzAlAAAKzMM5njf3L/niuiEUaezLMtz0ru5f3s10PD5EEFIekIkPSAVI72Z++nzc+1E4SR3s0d9Pm5++IHazz3tS56PYmU5IuOee96XOrsyKgkAJD0hEh6QEvJTwuKD+8h78DQDPLN4VKcuKpB/qRoZYAAAqIFbftv6tefEtieQKu/bf1a7+Jbk8igAAIq+VddxP8K/SiIkScoPGvU9Jro1HgkRRgA7AAM3SHpCJDkgNUzHqaWT6C4YurH/kk11NHfKp3PKmNpOHkVp9DhF+/EtZQES88ba85P4EyWQ73xtpzs/7eoBMZXsqV5U6lPC375Cqn3zdVIONTFRxxWO1S4uBlhPOVJPBcCaaTSei1xCDzs5RcNwpKGO5U4zjJY63ipa9re0y66npVas/KqTl0ybNVqSUITl5MZSbe1tLHF9Bk0FqQCpD0gSHJEAkd3NPfX9OfvRxUjsZsarqOrHcy4McNmsDtZ5P7GivvG/0v6lSSLXnk9xbr+ab6EvqVdIASHpAkKkA6OrXxazRISxinxpMz1IveTp6VClLjpwx5dHWWCSAAUQau/Lf1e7+Jbk44mW7eVSrShGrOjJ0Lnd05OM4rvlDY00+s61rFxpwi5Sm4winOWuU2opaT872geoAJJ4JviTZEVO4eNSb45y941INuvj1j0iKTABcAAzdIekIkPSAu/c5q76hzc1+pP5F4M3zEraF7ocFSnOPLJYSXVFmkFARL3xtpz0/7eqSyJe+MtOen/b1QJYAAEHLdTQtbiX3c17ZLRXvMzSL9nhV0bSUeGc4Q69J9koSRAqQ9IRIekAqR2s1l4Subn8jjpHZzX3yubn8gOhni9duvNUfZK4kdvPO6hGvb05PCTpyksdjxlhh1HGSAEh6QiR6RQBFFwyDPG2h/K5R/U/kypJFkzZqbipDikpexr/Qg7YDFUjpOGktNJSccVpKLbSeHFin0McaHNvcP2q30tjo3S4PLoHSjsXIiFWXhVvzN126JOACPez0aVR/yS6WsD0qVoRcIyklKcnCCf8UlGU2l+GMn7CJleeFFrynFdePyIOCkOSESHpECYAOwADOEh8UIkPSAnZFuO9XVvU4I1IaXoN6Mups1wxdI1zI91362oVeGVOOl6a1S60wJhEvvGWfPz/tqxLId/wCMs/WJ/wBtWKJgAAFSz4ra6FL05vqjH/IqqR1c5Ljvl3Ua/dhhTX4dv6nI5qRAJD0gSHJACR2c2F4UvQn8jkpHYzZXhK5ufyA4XdJuMcoU6etNW8HFtNRk3ObaT4XqWrzojZFvXUTpzeM4LFPhlDZ0r5nRz4jGd1UhNYtOGGzBQ73Hh246WJwMiUJxusG00qcnpYpOS1LZx6yaqyxQ9IRIekVAkdfN6po1nHgnF9K1+7E5SRItamhOE/Jkm+Th6gLNbyUq9ZrDFKFN8epaa7fWTTnZPju7iflVWvyxUP8AFHRKIlbfNDmrnt0iYyHW3zQ5u57VMlgQsoT0e9y4qkF+eWh7pMi5ZnjoQ5ZP3L5ntlqP2E5+RhP8rxIF/PSqz4o7lez/AHiQRkh6QiQ9IBMAHYABnEUPSESHpAKkXvMS70qNSg3rpz04+hP/AOk/zFGSOzmved5u6bbwhP7OfJLY/wA2iBpRDvvGWfPz/tqxMId94yz5+f8AbViiaeF7cKnSqVHspwlLlaWpdJ7ldzxutGjCinuqksX6Edfvw6AKY223KTxbbbfG3rY5IRIekQCQ9IRIekAqR2c2F4T/AE5+9HISO1mwvCf6cvegOPlWVvcXd1oybnTqSpzWMlKDjudj4NW3YclUZU7mlHa9PU/Kg00+rF+wblSTd1OvCWjV05y0mtUtKbk4Pji8Tr2dWFSEKiik2mnjg5QlslHHlIJKQ5IRIekUKkOSBIckBYsib3WvF6dRy5XNv3NHSRwshV8Jyg9klivSX+vcdwoiV14TbvVgqdwtuvFuH0JbIlephXpR44z6tH6ksCNfrGhVXHTmlytaus4TeLbe1ts62VquEYwW2TxfIv8AfuOWkQCQ5IEhyQBgAuAoGcJD0gSHJACQ9IEh6QGlZByirm3hNvdx3FRcU0tvt2+08spxrSr2DhNQgq8lOLSbk+8zeOzyVNcGuSfAUWxvq1CTlRm4OSSlgk1JcGKeonzy/dycJSqJunJzh9nDVJxlDHZ5M5dIGhNmeZcvu/3M5p4wjuIeguH2vF+0LnLV1Ug4zqvRksJKMYw0lxPBY4EFIASHJAkPSAEh6QJDkgBI7Gb0tGrOfk0py6GjlRR70KsoaWi8NKMoS1bYvagINbJ8JxeC0Z8DTe3znlkRSXfk9inH8+GEl1ROkkOSAVIekIkPSAVIckIkOSAfSm4SjOO2LTRaaNVThGcdkljyeYqyRIt7mcE1CWCevDBNY+0DrV14VQ5uv/gTm0li9i1vzIrs7ys6lOektzGax0Y6tLR+h6Tu6k1oylqe1JJYlCXNXTnKfBsXmitg1IRIckQCQ9IRIekAmADgAzhD0KADkPQgAeiHIAAeh6AAHIegAB6HIAAfE9EIAD0PQAA9D0AAKhyAAHocgAB6HIAAehyAAHIegABQAAP/2Q==",
     "pricePH": 18.00
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "title": "Egg",
     "description": "A versatile board with a rounded nose and tail for increased stability.",
-    "userID": 3,
+    "createdByUserID": 3,
     "imageURL": "https://www.hawaiisurf.com/495977-product_main_lg/venon-evo-intp-p-abhhybevoprp03.jpg",
     "pricePH": 14.50
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "title": "Gun",
     "description": "A long, narrow board designed for big waves.",
-    "userID": 2,
+    "createdByUserID": 2,
     "imageURL": "https://agotesurfboards.com/wp-content/uploads/2020/02/surfboards_torpedo_agote.jpg",
     "pricePH": 22.00
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "title": "Mini Simmons",
     "description": "A retro-inspired board with a wide, flat shape and twin fins.",
-    "userID": 1,
+    "createdByUserID": 1,
     "imageURL": "https://surf3.es/wp-content/uploads/2016/07/msimm-500x500.jpg",
     "pricePH": 17.00
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "title": "Foamie",
     "description": "A durable and lightweight board with a foam core and soft top.",
-    "userID": 3,
+    "createdByUserID": 3,
     "imageURL": "https://contents.mediadecathlon.com/p1313419/k$be6c6d0b4d300f90127588ef389f4ed5/sq/Surfboard+Schaumstoff+100+7+inkl+Leash+und+3+Finnen.jpg",
     "pricePH": 13.00
   }

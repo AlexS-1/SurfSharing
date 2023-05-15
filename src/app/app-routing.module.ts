@@ -17,6 +17,7 @@ import { BookOfferComponent } from './book-offer/book-offer.component';
 import { OfferDetailsComponent } from './offer-details/offer-details.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AuthGuardService } from './auth-guard.service';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [/* Add route info to route array*/
 { path: '', component: HomeComponent },
@@ -24,14 +25,15 @@ const routes: Routes = [/* Add route info to route array*/
 { path: 'about-us', component: AboutUsComponent },
 { path: 'home', component: HomeComponent },
 { path: 'my-account', component: MyAccountComponent, canActivate: [AuthGuardService], data: { roles: ['user', 'admin'] }},
-{ path: 'my-offers', component: MyOffersComponent, canActivate: [AuthGuardService], data: { roles: ['user', 'admin'] }},
+{ path: 'my-saved-offers', component: MyOffersComponent, canActivate: [AuthGuardService], data: { roles: ['user', 'admin'] }},
 { path: 'log-in', component: LogInComponent },
 { path: 'forgot-password', component: ForgotPasswordComponent },
 { path: 'create-offer', component: CreateOfferComponent , canActivate: [AuthGuardService], data: { roles: ['user', 'admin'] }},
 { path: 'create-account', component: CreateAccountComponent },
 { path: 'browse-offers', component: BrowseOffersComponent },
-{ path: 'offer-details/:id', component: OfferDetailsComponent }, // Änderung hier
+{ path: 'offer-details/:id', component: OfferDetailsComponent },
 { path: 'book-offer', component: BookOfferComponent },
+{ path: 'test', component: TestComponent } 
 ];
 
 @NgModule({

@@ -12,7 +12,7 @@
     padding-bottom: 40px;
  }
 
- .my-evaluations-box {
+ .my-offers-box {
     border-radius: 10px;
     background-color: #BCEEF0;
     padding: 35px 8%;
@@ -22,11 +22,11 @@
     box-sizing: border-box;
  }
 
- .my-data h2, .my-evaluations-box h2 {
+ .my-data h2, .my-offers-box h2 {
     margin-bottom: 25px;
     margin-top: 10px;
  }
 
- .my-data-content p, .my-evaluations-content p {
+ .my-data-content p, .my-offers-content p {
     font-size: 16px;
  }
