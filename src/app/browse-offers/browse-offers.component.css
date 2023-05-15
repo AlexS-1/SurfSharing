@@ -54,18 +54,27 @@
   }
 
   .picture {
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
   }
 
-
-
-  .description {
+  .details {
     height: 50%;
+  }
+
+  .title {
     display: flex;
     align-items: normal;
     text-align: left;
     padding: 0px 18px;
+  }
+
+  .price {
+    display: flex;
+    align-items: normal;
+    text-align: left;
+    padding: 8px 18px;
   }
 
   /* Tablet */

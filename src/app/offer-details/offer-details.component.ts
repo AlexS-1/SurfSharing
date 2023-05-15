@@ -10,6 +10,7 @@ interface DataEntry {
   description: string;
   userId: string;
   rating?: number;
+  pricePH: number;
 }
 
 interface CommentEntry {
@@ -32,10 +33,5 @@ export class OfferDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.params.subscribe((params) => {
-      const id = params['id'];
-      this.dataEntry = jsonData.find((entry) => entry.id === parseInt(id, 10));
-      this.reviews = commentData.filter((entry) => entry.kurs_id === parseInt(id, 10));
-    });
   }
 }

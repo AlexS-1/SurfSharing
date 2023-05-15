@@ -15,6 +15,5 @@ export class MyOffersComponent implements OnInit {
   }
 
   private loadSelectedCourses(): void {
-    this.contentData = jsonData.filter(course => this.selectedCourseIds.includes(course.id));
   }
 }
