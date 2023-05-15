@@ -1,76 +1,82 @@
-/* Desktop */
-@media screen and (min-width: 1024px) {
-    .my-offers {
-        margin: 12px 4%;
-        padding: 16px 24px;
-    }
+.my-offers {
+    margin: 12px 4%;
+    padding: 16px 24px;
+}
 
-    .grid-container {
-        max-width: 1000px;
-        display: grid;
-        grid-template-columns: auto auto;
+.grid-container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto;
 
-    }
+}
 
-    .username-rating {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 10px 0 0;
-    }
+.username-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 0 0;
+}
 
-    .username-rating .username {
-        font-weight: bold;
-        font-size: 1.17em;
+.username-rating .username {
+    font-weight: bold;
+    font-size: 1.17em;
 
-    }
+}
 
-    h1 {
-        font-size: 52px;
-        font-weight: bolder;
-    }
+h1 {
+    font-size: 52px;
+    font-weight: bolder;
+}
 
-    .btns {
-        margin: auto;
-    }
+.btns {
+    margin: auto;
+}
 
-    button {
-        background-color: #12879B;
-        color: white;
-        border: none;
-        font-weight: bolder;
-        font-size: 20px;
-        border-radius: 24px;
-        padding: 10px 16px;
-        line-height: 48px;
-        margin: 12px 24px;
-    }
+button {
+    background-color: #12879B;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 24px;
+    padding: 10px 16px;
+    line-height: 48px;
+    margin: 12px 24px;
+}
 
-    button:hover {
-        cursor: pointer;
-        transform: scale(1.05); /* Vergrößerungsfaktor */
-        transition: transform 0.1s ease-in-out; /* Übergangseffekt */
-        background-color: #BCEEF0;
-        color: white;
-    }
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Vergrößerungsfaktor */
+    transition: transform 0.1s ease-in-out; /* Übergangseffekt */
+    background-color: #BCEEF0;
+    color: white;
+}
 
-    p {
-        max-width: 1000px;
-    }
+p {
+    max-width: 1000px;
+}
 
-    .review-box {
-        max-width: 1000px;
-        background-color: #D8DCFF;
-        border-radius: 24px;
-        padding: 12px 4%;
-        padding-bottom: 18px;
-        margin: 24px 0px;
-    }
+.review-box {
+    max-width: 1000px;
+    background-color: #D8DCFF;
+    border-radius: 24px;
+    padding: 12px 4%;
+    padding-bottom: 18px;
+    margin: 24px 0px;
+}
 
-    img {
-        width: 500px;
-        object-fit: cover;
-    }
+img {
+    width: 500px;
+    object-fit: cover;
+}
+
+.offer-content {
+    border-radius: 10px;
+    background-color: #BCEEF0;
+}
+
+.content {  
+    padding: 30px;
 }
 
 /* Tablet */
@@ -108,27 +114,6 @@
     .btns {
         margin: auto;
     }
-
-    button {
-        background-color: #ffa100;
-        color: white;
-        border: none;
-        font-weight: bolder;
-        font-size: 20px;
-        border-radius: 24px;
-        padding: 10px 16px;
-        line-height: 48px;
-        margin: 12px 24px;
-    }
-
-    button:hover {
-        cursor: pointer;
-        transform: scale(1.05); /* Vergrößerungsfaktor */
-        transition: transform 0.1s ease-in-out; /* Übergangseffekt */
-        background-color: #0066A1;
-        color: white;
-    }
-
 
     p {
         max-width: 1000px;
@@ -181,29 +166,13 @@
         margin: auto;
     }
 
-    button {
-        background-color: #ffa100;
-        color: white;
-        border: none;
-        font-weight: bolder;
-        font-size: 20px;
-        border-radius: 24px;
-        padding: 10px 16px;
-        line-height: 48px;
-        margin: 12px 24px;
-    }
-
-    button:hover {
-        cursor: pointer;
-        transform: scale(1.05); /* Vergrößerungsfaktor */
-        transition: transform 0.1s ease-in-out; /* Übergangseffekt */
-        background-color: #0066A1;
-        color: white;
-    }
-
-
     p {
         max-width: 1000px;
+    }
+
+    img {
+        width: 80%;
+        max-width: 500px;
     }
 
     .review-box {
@@ -216,11 +185,4 @@
     }
 }
 
-.offer-content {
-  border-radius: 10px;
-  background-color: #BCEEF0;
-}
 
-.content {
-  padding: 30px;
-}
