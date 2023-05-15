@@ -10,9 +10,7 @@ import { Offer } from '../models/offer';
   styleUrls: ['./my-account.component.css']
 })
 export class MyAccountComponent {
-  constructor(private backend: BackendDataService, private authService: AuthService) {
-
-  }
+  constructor(private backend: BackendDataService, private authService: AuthService) { }
 
   offers: Offer[] = []
 
