@@ -223,7 +223,7 @@ export class BackendDataService {
     const userReference = doc(this.db, "users", userID);
     let userData = await this.getUserData(username);
     if (userData.exists()) {
-        let userOffers: number[] = userData.data()['offers'];
+        let userOffers: number[] = userData.data()['favOffers'];
         if (userOffers.includes(offerID)) {
           const index = userOffers.indexOf(offerID, 0);
           if (index > -1) {
