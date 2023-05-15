@@ -1,4 +1,4 @@
-.my-courses {
+.my-saved-offers {
     margin: 12px 6%;
     padding: 12px 24px;
 }
@@ -74,4 +74,16 @@ a {
         gap: 20px;
         padding: 0px;   /* force same visaul bahaviour as in "browse-course"*/
     }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+  .browse-courses {
+    text-align: left;
+  }
+
+  .card-container{
+    float: left;
+  }
 }
