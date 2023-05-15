@@ -118,8 +118,8 @@ export class BackendDataService {
   // Retrieve user data from username and return data
   // Rerurns doc.data() on success or empty data ( {} ) on failure
   async getOfferData(id: number) {
-    const offerDocument = await getDoc(doc(this.db, 'offers', this.cyrb53(id.toString()).toString()));
-    return offerDocument
+    const courseDocument = await getDoc(doc(this.db, 'offers', id.toString()));
+    return courseDocument
   }
 
   // Get all offers in database for browse-offers view
@@ -260,3 +260,7 @@ export class BackendDataService {
     return 4294967296 * (2097151 & h2) + (h1 >>> 0);
     };
 }
+
+
+
+

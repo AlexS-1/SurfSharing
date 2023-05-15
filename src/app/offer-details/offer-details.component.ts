@@ -4,7 +4,7 @@ import { Offer } from '../models/offer';
 import { AuthService } from '../auth-service.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 
-interface DataEntry {  
+interface DataEntry {
   id: number;
   title: string;
   description: string;
