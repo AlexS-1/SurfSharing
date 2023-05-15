@@ -30,6 +30,7 @@ import { BookOfferComponent } from './book-offer/book-offer.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { ImageUploadFormComponent } from './image-upload-form/image-upload-form.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ImageUploadFormComponent } from './image-upload-form/image-upload-form.
     BookOfferComponent,
     SideBarComponent,
     TermsOfUseComponent,
-    ImageUploadFormComponent
+    ImageUploadFormComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

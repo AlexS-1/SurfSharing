@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import jsonData from './../../assets/content/course.json';
-import commentData from '../../assets/content/comments.json';
+import jsonData from './../../assets/content/offers.json';
 
 
 interface DataEntry {
@@ -13,14 +12,6 @@ interface DataEntry {
   pricePH: number;
 }
 
-interface CommentEntry {
-  username: string;
-  review: string;
-  kurs_id: number;
-  date: string;
-  rating: number;
-}
-
 @Component({
   selector: 'app-offer-details',
   templateUrl: './offer-details.component.html',
@@ -28,7 +19,6 @@ interface CommentEntry {
 })
 export class OfferDetailsComponent implements OnInit {
   dataEntry: DataEntry | undefined;
-  reviews: CommentEntry[] = [];
 
   constructor(private route: ActivatedRoute) {}
 

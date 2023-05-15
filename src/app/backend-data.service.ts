@@ -70,7 +70,7 @@ export class BackendDataService {
 
     //Create data
     const data: Offer = {
-      id: offer.id,
+      id: Number(documentID),
       title: offer.title,
       description: offer.description,
       createdByUserID: offer.createdByUserID,
@@ -141,37 +141,16 @@ export class BackendDataService {
     }
   }
 
-  /*async setOfferPicture(username: string, url: string) {
-    const userID = this.cyrb53(username).toString();
-    const offerReference = doc(this.db, "offers", userID);
-    let userData = await this.getUserData(username);
-    if (userData.exists()) {
-        const data: User = {
-            id: userData.data()['id'] ,
-            username: userData.data()['username'],
-            firstName: userData.data()['firstName'],
-            surname: userData.data()['surname'],
-            email: userData.data()['email'],
-            dateOfBirth: userData.data()['dateOfBirth'],
-            password: userData.data()['password'],
-            courses: userData.data()['courses'],
-            profilePicture: url
-        }
-        await setDoc(userReference, data);
-    }
-  }*/
-
-
 //READ DATA
   // Retrieve user data from username and return data
   async getUserData(username: String) {
     const userDoc = await getDoc(doc(this.db, 'users', this.cyrb53(username.toString()).toString()));
     return userDoc
-    }
+  }
 
   // Retrieve user data from username and return data
   // Rerurns doc.data() on success or empty data ( {} ) on failure
-  async getCourseData(id: number) {
+  async getOfferData(id: number) {
     const courseDocument = await getDoc(doc(this.db, 'courses', this.cyrb53(id.toString()).toString()));
     return courseDocument
   }
@@ -189,25 +168,26 @@ export class BackendDataService {
     return querySnapshot;
   }
 
-  /*
-  TODO: Change to offers
   // Get all courses in database for browse-courses view
-  async getAllCourses() {
-    const coursesQuery = query(collection(this.db, "courses"));
-    const courseCollection = await getDocs(coursesQuery);
-    const allCourses: Course[] = [];
-    courseCollection.forEach((doc) => {
-      const course: Course = {
+  async getAllOffers() {
+    const offersQuery = query(collection(this.db, "offers"));
+    const offersCollection = await getDocs(offersQuery);
+    const allOffers: Offer[] = [];
+    offersCollection.forEach((doc) => {
+      const offer: Offer = {
         id: doc.data()['id'],
         title: doc.data()['title'],
         description: doc.data()['description'],
-        createdByUserID: doc.data()['createdByUserID']
+        createdByUserID: doc.data()['createdByUserID'],
+        imageURL: doc.data()['imageURL'],
+        pricePH: doc.data()['pricePH']
       }
-      allCourses.push(course);
+      allOffers.push(offer);
     });
-    return allCourses;
+    console.log(allOffers);
+    return allOffers;
   }
-  */
+
 
   async getAllEvaluations() {
     const evaluationQuery = query(collection(this.db, "evaluations"));
@@ -248,28 +228,27 @@ export class BackendDataService {
   }
 
   // Retrieve course data
-  /*TODO: Change to offers
-  async getMyCoursesByCourseIDs(courses: number[]) {
-    let myCourseDocuments: Course[] = [];
-    const collectionQuery = query(collection(this.db, 'courses'));
+  async getMyOffers(offers: number[]) {
+    let myOfferDocuments: Offer[] = [];
+    const collectionQuery = query(collection(this.db, 'offers'));
     const collectionSnapshot = await getDocs(collectionQuery)
-    for (let courseID of courses) {
+    for (let offerID of offers) {
       collectionSnapshot.forEach((doc) => {
-        if (doc.data()['id'] === Number(courseID)) {
-          const course: Course = {
+        if (doc.data()['id'] === Number(offerID)) {
+          const offer: Offer = {
             id: doc.data()['id'],
             title: doc.data()['title'],
             description: doc.data()['description'],
-            createdByUserID: doc.data()['createdByUserID']
+            createdByUserID: doc.data()['createdByUserID'],
+            pricePH: doc.data()['pricePH']
           }
-          myCourseDocuments.push(course);
+          myOfferDocuments.push(offer);
         }
       });
     }
 
-    return myCourseDocuments
+    return myOfferDocuments
   }
-  */
 
   // Retrieve login data from token return tokenDoc
   async getloggedInData(id: String| null): Promise<DocumentData|null>{

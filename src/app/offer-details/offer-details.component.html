@@ -15,15 +15,4 @@
     <div class="course-description" *ngIf="dataEntry">
         <p>{{ dataEntry.description }}</p>
     </div>
-    <div class="review-container">
-        <div class="review-box" *ngFor="let review of reviews">
-            <div class="username-rating">
-                <span class="username">{{ review.username }}</span>
-            </div>
-            
-            
-            <p class="date">{{ review.date }}</p>
-            <p class="review">{{ review.review }}</p>
-        </div>
-    </div>
 </article>

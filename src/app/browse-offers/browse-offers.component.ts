@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import contentData from './../../assets/content/course.json';
+import { BackendDataService } from '../backend-data.service';
+import { Offer } from '../models/offer';
 
 @Component({
   selector: 'app-browse-offers',
@@ -7,7 +8,17 @@ import contentData from './../../assets/content/course.json';
   styleUrls: ['./browse-offers.component.css']
 })
 export class BrowseOffersComponent {
-  contentData = contentData;
+  constructor(private backend: BackendDataService) {
 
-  ngOnInit(): void {}
+  }
+  
+  offers: Offer[] = []
+
+  ngOnInit() {
+    this.loadOffers()
+  }
+
+  async loadOffers() {
+    this.offers = await this.backend.getAllOffers()
+  }
 }

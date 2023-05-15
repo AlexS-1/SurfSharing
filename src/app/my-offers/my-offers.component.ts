@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import jsonData from './../../assets/content/course.json';
+import { BackendDataService } from '../backend-data.service';
+import { AuthService } from '../auth-service.service';
 
 @Component({
   selector: 'app-my-offers',
@@ -10,10 +11,19 @@ export class MyOffersComponent implements OnInit {
   contentData: any[] = [];
   selectedCourseIds = [1, 2]; // Liste der ausgewählten Kurs-IDs
 
-  ngOnInit(): void {
-    this.loadSelectedCourses();
+  constructor(private backend: BackendDataService, private auth: AuthService) {
+
   }
 
-  private loadSelectedCourses(): void {
+  ngOnInit(): void {
   }
+
+  /*private async loadSelectedCourses() {
+    const currentUN = await this.auth.getCurrentUserName()
+    const currentUser = await this.backend.getUserData(currentUN);
+    if (currentUser.exists()) {
+      selc
+    }
+    this.backend.getMyOffers()
+  }*/
 }
