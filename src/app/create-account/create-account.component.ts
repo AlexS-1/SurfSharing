@@ -11,7 +11,7 @@ export class CreateAccountComponent {
   firstName = 'User';
   surname = 'Lastname';
   username = 'user1';
-  dateOfBirth = '';
+  dateOfBirth = '2000-01-01';
   email = 'user1@example.com';
   password = 'UserPassword@!1';
   repeatedPassword = 'UserPassword@!2';

@@ -40,17 +40,11 @@ export class MyAccountComponent {
       this.user.dateOfBirth = user.data()['dateOfBirth'];
     }
 
-    /*const evaluations = await this.backend.getEvaluationsForUser(this.user.username);
-    evaluations.forEach((doc) => {
-      const offer: Offer = {
-        id: doc.data()['id'],
-        title: doc.data()['title'],
-        description: doc.data()['description'],
-        createdByUserID: doc.data()['createdByUserID'],
-        imageURL: doc.data()['imageURL'],
-        pricePH: doc.data()['pricePH']
+    const offers: Offer[] = await this.backend.getAllOffers();
+    for (let i = 0; i < offers.length; i++) {
+      if (offers[i].createdByUserID == Number(user.id)) {
+        this.offers.push(offers[i])
       }
-      this.offers.push(offer);
-    });*/
+    }
   }
 }
