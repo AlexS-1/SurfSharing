@@ -1,6 +1,6 @@
 /* Desktop */
 @media screen and (min-width: 1024px) {
-    .my-courses {
+    .my-offers {
         margin: 12px 4%;
         padding: 16px 24px;
     }
@@ -43,7 +43,7 @@
         border-radius: 24px;
         padding: 10px 16px;
         line-height: 48px;
-        margin: 12px 24px; 
+        margin: 12px 24px;
     }
 
     button:hover {
@@ -75,7 +75,7 @@
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .my-courses {
+    .my-offers {
         margin: 12px 4%;
         padding: 16px 24px;
     }
@@ -147,7 +147,7 @@
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    .my-courses {
+    .my-offers {
         margin: 12px 4%;
         padding: 16px 24px;
     }
@@ -214,4 +214,13 @@
         padding-bottom: 18px;
         margin: 24px 0px;
     }
+}
+
+.offer-content {
+  border-radius: 10px;
+  background-color: #BCEEF0;
+}
+
+.content {
+  padding: 30px;
 }

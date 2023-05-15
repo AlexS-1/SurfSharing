@@ -1,4 +1,4 @@
-<article class="my-courses">
+<article class="my-offers">
     <section class="grid-container" *ngIf="offer">
         <h1>{{ offer.title }}</h1>
         <div class="btns">
@@ -8,13 +8,15 @@
             <a href="book-offer" routerLink="/book-offer" routerLinkActive="active" ariaCurrentWhenActive="page">
                 <button class="review">
                     Book Offer
-                </button> 
+                </button>
             </a>
         </div>
     </section>
-    <div class="course-description" *ngIf="offer">
-        <img src={{offer.imageURL}} alt="image of surfboard for this offer">
-        <p>{{ offer.pricePH }}</p>
-        <p>{{ offer.description }}</p>
-    </div>
+    <section class="offer-content" *ngIf="offer">
+      <div>
+        <img class="content" src={{offer.imageURL}} alt="image of surfboard for this offer">
+        <p class="content">{{ offer.pricePH }} €/h</p>
+        <p class="content">{{ offer.description }}</p>
+      </div>
+    </section>
 </article>
