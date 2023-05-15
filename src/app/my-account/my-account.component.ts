@@ -40,7 +40,7 @@ export class MyAccountComponent {
       this.user.dateOfBirth = user.data()['dateOfBirth'];
     }
 
-    const evaluations = await this.backend.getEvaluationsForUser(this.user.username);
+    /*const evaluations = await this.backend.getEvaluationsForUser(this.user.username);
     evaluations.forEach((doc) => {
       const offer: Offer = {
         id: doc.data()['id'],
@@ -51,6 +51,6 @@ export class MyAccountComponent {
         pricePH: doc.data()['pricePH']
       }
       this.offers.push(offer);
-    });
+    });*/
   }
 }

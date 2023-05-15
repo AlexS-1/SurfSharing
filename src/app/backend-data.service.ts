@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, DocumentData } from '@angular/fire/compat/firestore';
 import { doc, setDoc, getDoc, deleteDoc, query, where, getDocs, collection, documentId } from "firebase/firestore"
 import { User } from './models/user';
-import { Evaluation } from './models/evaluation';
 import { Offer } from './models/offer';
 
 
@@ -51,8 +50,7 @@ export class BackendDataService {
         email: user.email,
         dateOfBirth: user.dateOfBirth,
         password: user.password,
-        courses: user.courses,
-        profilePicture: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+        favOffers: user.favOffers
       }
       // Creates a new doc with the userId as doc name
       await setDoc(doc(this.db, 'users', data.id.toString()), data);
@@ -86,45 +84,14 @@ export class BackendDataService {
     return "Offer already exists"
   }
 
-  async addEvaluation(evaluation: Evaluation): Promise<string> {
-
-    //Create data
-    const data = {
-      courseID: evaluation.courseID,
-      date: evaluation.date,
-      username: evaluation.username,
-      rating: evaluation.rating,
-      review: evaluation.review
-    }
-
-    //Create course reference id
-    const courseReferenceID = this.cyrb53(evaluation.courseID.toString()).toString();
-    const reviewReferenceID = courseReferenceID + this.cyrb53(evaluation.username.toString()).toString();
-
-    //Check if course already exists
-    const courseReference = doc(this.db, "courses", courseReferenceID);
-    const courseDocument = await getDoc(courseReference);
-    if(!courseDocument.exists()) {
-      return "Please add the course first";
-    } else {
-      const reviewReference = doc(this.db, "evaluations", reviewReferenceID);
-      const reviewDocument = await getDoc(reviewReference)
-      if (reviewDocument.exists()) {
-        return "You can only review a course once";
-      }
-      await setDoc (reviewReference, data);
-      return "Review added";
-    }
-  }
-
-  async addToUsersCourses(username: string, courseID: number) {
+  async addToUsersOffers(username: string, courseID: number) {
     const userID = this.cyrb53(username).toString();
     const userReference = doc(this.db, "users", userID);
     let userData = await this.getUserData(username);
     if (userData.exists()) {
-        let userCourses: number[] = userData.data()['courses'];
-        if (!userCourses.includes(courseID)) {
-            userCourses.push(courseID);
+        let userOffers: number[] = userData.data()['courses'];
+        if (!userOffers.includes(courseID)) {
+            userOffers.push(courseID);
         }
         const data: User = {
             id: userData.data()['id'] ,
@@ -134,8 +101,7 @@ export class BackendDataService {
             email: userData.data()['email'],
             dateOfBirth: userData.data()['dateOfBirth'],
             password: userData.data()['password'],
-            courses: userCourses,
-            profilePicture: userData.data()['profilePicture']
+            favOffers: userOffers
         }
         await setDoc(userReference, data);
     }
@@ -153,19 +119,6 @@ export class BackendDataService {
   async getOfferData(id: number) {
     const courseDocument = await getDoc(doc(this.db, 'courses', this.cyrb53(id.toString()).toString()));
     return courseDocument
-  }
-
-  // Retrieeve the evaluations for a given user
-  async getEvaluationsForUser(username: string) {
-    const q = query(collection(this.db, 'evaluations'), where('username', '==', username));
-    const querySnapshot = await getDocs(q);
-    return querySnapshot;
-  }
-
-  async getEvaluationsForCourse(courseID: number) {
-    const q = query(collection(this.db, 'evaluations'), where('courseID', '==', courseID));
-    const querySnapshot = await getDocs(q);
-    return querySnapshot;
   }
 
   // Get all courses in database for browse-courses view
@@ -188,24 +141,6 @@ export class BackendDataService {
     return allOffers;
   }
 
-
-  async getAllEvaluations() {
-    const evaluationQuery = query(collection(this.db, "evaluations"));
-    const evaluationCollection = await getDocs(evaluationQuery);
-    const allEvaluations: Evaluation[] = [];
-    evaluationCollection.forEach((doc) => {
-      const evaluation: Evaluation = {
-        username: doc.data()['username'],
-        date: doc.data()['date'],
-        review: doc.data()['review'],
-        rating: doc.data()['rating'],
-        courseID: doc.data()['courseID']
-      }
-      allEvaluations.push(evaluation);
-    });
-    return allEvaluations;
-  }
-
   async getAllUsers() {
     const usersQuery = query(collection(this.db, "users"));
     const userCollection = await getDocs(usersQuery);
@@ -219,8 +154,7 @@ export class BackendDataService {
         email: doc.data()['email'],
         dateOfBirth: doc.data()['dateOfBirth'],
         password: doc.data()['password'],
-        courses: doc.data()['courses'],
-        profilePicture: doc.data()['profilePicture']
+        favOffers: doc.data()['favOffers']
       }
       allusers.push(user);
     });
@@ -282,16 +216,16 @@ export class BackendDataService {
   }
 
   // Remove course from user selected course
-  async removeFromUserCourses(username: string, courseID: number) {
+  async removeFromUserOffers(username: string, courseID: number) {
     const userID = this.cyrb53(username).toString();
     const userReference = doc(this.db, "users", userID);
     let userData = await this.getUserData(username);
     if (userData.exists()) {
-        let userCourses: number[] = userData.data()['courses'];
-        if (userCourses.includes(courseID)) {
-          const index = userCourses.indexOf(courseID, 0);
+        let userOffers: number[] = userData.data()['courses'];
+        if (userOffers.includes(courseID)) {
+          const index = userOffers.indexOf(courseID, 0);
           if (index > -1) {
-             userCourses.splice(index, 1);
+             userOffers.splice(index, 1);
           }
         }
         const data: User = {
@@ -302,8 +236,7 @@ export class BackendDataService {
             email: userData.data()['email'],
             dateOfBirth: userData.data()['dateOfBirth'],
             password: userData.data()['password'],
-            courses: userCourses,
-            profilePicture: userData.data()['profilePicture']
+            favOffers: userOffers
         }
         await setDoc(userReference, data);
     }
