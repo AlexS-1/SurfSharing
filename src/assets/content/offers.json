@@ -8,14 +8,6 @@
     "pricePH": 12.50
   },
   {
-    "id": 2,
-    "title": "Beginner Soft-Top Surfboard",
-    "description": "A great beginner board with a soft top and rounded edges.",
-    "createdByUserID": 3,
-    "imageURL": "https://www.upsurfboard.com/wp-content/uploads/Tabla-de-surf-UP-SIMPLY-UP-7´0-2022-Azul-Softboard-scaled.jpg",
-    "pricePH": 12.50
-  },
-  {
     "id": 3,
     "title": "Longboard",
     "description": "A classic longboard for all types of waves.",
