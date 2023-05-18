@@ -38,7 +38,6 @@ export class OfferDetailsComponent {
 
   //Help variables
   toggleMyOffers: string = "Operation my Offers"
-  toggleBookOffer: string = "Log in to Book Offer"
   loggedIn = false;
   debugging = false;
 
@@ -72,7 +71,6 @@ export class OfferDetailsComponent {
     if (loggedIn) {
       const getCurrentUserName = await this.authService.getCurrentUserName()
       const currentUserData = await this.backend.getUserData(getCurrentUserName);
-      this.toggleBookOffer = "Book Offer"
       if (currentUserData.exists()) {
         const loggedInUserCourses: number[] = currentUserData.data()['favOffers']
         if (loggedInUserCourses.includes(currentOfferID)) {
@@ -83,7 +81,6 @@ export class OfferDetailsComponent {
       }
     } else {
       this.toggleMyOffers = "Log in to add to my Offers"
-      this.toggleBookOffer = "Log in to Book Offer"
     }
   }
 
@@ -97,15 +94,6 @@ export class OfferDetailsComponent {
       this.toggleMyOffers = "+ Add to my Offers";
     } else {
       this.router.navigateByUrl("/log-in")
-    }
-  }
-
-  async toggleUserBooking() {
-    this.loggedIn = await this.authService.isLoggedIn();
-    if (this.loggedIn && this.toggleBookOffer === "Book Offer") {
-      this.router.navigateByUrl("/book-offer/" + this.offer.id.toString());
-    } else {
-      this.router.navigateByUrl("/log-in");
     }
   }
 

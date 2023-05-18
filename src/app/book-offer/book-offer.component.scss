@@ -1,15 +1,7 @@
-h1 {
-  color: #464646;
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .dowPicker {
   width: 300px;
-  margin: 0 auto;
   text-align: center;
-  padding: 40px 0 0 0;
+  padding: 40px 0;
   .dowPickerOption {
     display: inline-block;
     input[type=checkbox] {

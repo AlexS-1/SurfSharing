@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppFetchDataTsService } from './app.fetch-data.ts.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -61,7 +61,8 @@ import { TestComponent } from './test/test.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    ReactiveFormsModule
   ],
   providers: [AppFetchDataTsService],
   bootstrap: [AppComponent]

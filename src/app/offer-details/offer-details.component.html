@@ -5,11 +5,9 @@
             <button (click)="toggleUserOffers()" class="btn1" [ngClass]="toggleMyOffers == 'Log in to add to my Offers' ? 'log-in' : 'normal'">
                 {{ toggleMyOffers }}
             </button>        
-            <button (click)="toggleUserBooking()" class="review">
-                {{ toggleBookOffer }}
-            </button>
         </div>
     </section>
+    <app-book-offer></app-book-offer>
     <section class="offer-content" *ngIf="offer">
       <div>
         <img class="content" src={{offer.imageURL}} alt="image of surfboard for this offer">
