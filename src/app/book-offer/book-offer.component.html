@@ -1,43 +1,44 @@
-<h2>Choose your days:</h2>
-<div class="dowPicker">
-    <div class="dowPickerOption">
-        <input type="checkbox" id="dow2">
-        <label for="dow2">M</label>
-    </div>
-    <div class="dowPickerOption">
-        <input type="checkbox" id="dow3">
-        <label for="dow3">T</label>
-    </div>
-    <div class="dowPickerOption">
-        <input type="checkbox" id="dow4">
-        <label for="dow4">W</label>
-    </div>
-    <div class="dowPickerOption">
-        <input type="checkbox" id="dow5">
-        <label for="dow5">T</label>
-    </div>
-    <div class="dowPickerOption">
-        <input type="checkbox" id="dow6">
-        <label for="dow6">F</label>
-    </div>
-    <div class="dowPickerOption">
-        <input type="checkbox" id="dow7">
-        <label for="dow7">S</label>
-    </div>
-    <div class="dowPickerOption">
-        <input type="checkbox" id="dow1">
-        <label for="dow1">S</label>
-    </div>
-</div>
-<section style="display: none;">
-    <form [formGroup]="form" (ngSubmit)="submit()" novalidate class="dowPicker">
-        <div *ngFor="let weekday of weekdays; let i = index">
-        <input type="checkbox" formArrayName="selectedWeekdays" [value]="weekday.value" (change)="onCheckboxChange($event)"/>
-            {{ weekday.name}}
-        </div>
-        <button type="submit" (click)="toggleUserBooking()" class="review">
-            {{ toggleBookOffer }}
-        </button>
-    </form>
-    <p>{{ form.value | json }}</p>
-</section>
+<article class="componentConainer">
+  <h2 *ngIf="loggedIn">Choose your days:</h2>
+  <section *ngIf="loggedIn" class="dowPicker">
+      <div class="dowPickerOption">
+          <input type="checkbox" id="dow2">
+          <label for="dow2">M</label>
+      </div>
+      <div class="dowPickerOption">
+          <input type="checkbox" id="dow3">
+          <label for="dow3">T</label>
+      </div>
+      <div class="dowPickerOption">
+          <input type="checkbox" id="dow4">
+          <label for="dow4">W</label>
+      </div>
+      <div class="dowPickerOption">
+          <input type="checkbox" id="dow5">
+          <label for="dow5">T</label>
+      </div>
+      <div class="dowPickerOption">
+          <input type="checkbox" id="dow6">
+          <label for="dow6">F</label>
+      </div>
+      <div class="dowPickerOption">
+          <input type="checkbox" id="dow7">
+          <label for="dow7">S</label>
+      </div>
+      <div class="dowPickerOption">
+          <input type="checkbox" id="dow1">
+          <label for="dow1">S</label>
+      </div>
+  </section>
+  <section>
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate class="dowPicker">
+          <div *ngFor="let weekday of weekdays; let i = index" style="display: none;">
+          <input type="checkbox" formArrayName="selectedWeekdays" [value]="weekday.value" (change)="onCheckboxChange($event)"/>
+              {{ weekday.name}}
+          </div>
+          <button type="submit" (click)="toggleUserBooking()" class="daypickerBtn">
+              {{ toggleBookOffer }}
+          </button>
+      </form>
+  </section>
+</article>

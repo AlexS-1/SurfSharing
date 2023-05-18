@@ -1,3 +1,7 @@
+.componentConainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
 .dowPicker {
   width: 300px;
   text-align: center;
@@ -17,4 +21,28 @@
       font-weight: 500;
     }
   }
+}
+
+h2{
+  padding-top: 30px;
+}
+
+button {
+  background-color: #12879B;
+  color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 24px;
+  padding: 10px 16px;
+  line-height: 48px;
+  margin: 0px 24px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* Vergrößerungsfaktor */
+  transition: transform 0.1s ease-in-out; /* Übergangseffekt */
+  background-color: #BCEEF0;
+  color: white;
 }
