@@ -3,6 +3,7 @@ import { AngularFirestore, DocumentData } from '@angular/fire/compat/firestore';
 import { doc, setDoc, getDoc, deleteDoc, query, where, getDocs, collection, documentId } from "firebase/firestore"
 import { User } from './models/user';
 import { Offer } from './models/offer';
+import { KeyValue } from '@angular/common';
 
 
 
@@ -12,9 +13,9 @@ import { Offer } from './models/offer';
 
 export class BackendDataService {
 
-  constructor(private firestore: AngularFirestore) {
+  public availability: KeyValue<string,boolean>[] = [];
 
-  }
+  constructor(private firestore: AngularFirestore) {  }
 
   db = this.firestore.firestore;
 
@@ -73,7 +74,8 @@ export class BackendDataService {
       description: offer.description,
       createdByUserID: offer.createdByUserID,
       pricePH: offer.pricePH,
-      imageURL: offer.imageURL
+      imageURL: offer.imageURL,
+      availability: offer.availability
     }
 
     //Add data if it does not exist yet
@@ -134,7 +136,8 @@ export class BackendDataService {
         description: doc.data()['description'],
         createdByUserID: doc.data()['createdByUserID'],
         imageURL: doc.data()['imageURL'],
-        pricePH: doc.data()['pricePH']
+        pricePH: doc.data()['pricePH'],
+        availability: doc.data()['availabilty']
       }
       allOffers.push(offer);
     });
@@ -175,7 +178,8 @@ export class BackendDataService {
             description: doc.data()['description'],
             createdByUserID: doc.data()['createdByUserID'],
             imageURL: doc.data()['imageURL'],
-            pricePH: doc.data()['pricePH']
+            pricePH: doc.data()['pricePH'],
+            availability: doc.data()['availabilty']
           }
           myOfferDocuments.push(offer);
         }

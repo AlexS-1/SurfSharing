@@ -33,7 +33,8 @@ export class OfferDetailsComponent {
     title: '',
     description: '',
     createdByUserID: 0,
-    pricePH: 0
+    pricePH: 0,
+    availability: []
   }
 
   //Help variables

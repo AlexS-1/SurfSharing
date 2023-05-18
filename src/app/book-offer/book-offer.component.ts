@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BackendDataService } from '../backend-data.service';
 import { AuthService } from '../auth-service.service';
 import { Offer } from '../models/offer';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
+import { KeyValue } from '@angular/common';
 
 @Component({
   selector: 'app-book-offer',
@@ -11,7 +12,7 @@ import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
   styleUrls: ['./book-offer.component.scss']
 })
 export class BookOfferComponent {
-  
+
   form: FormGroup;
   weekdays: Array<any> = [
     { name: 'M', value: 'Mon' },
@@ -39,9 +40,10 @@ export class BookOfferComponent {
     title: '',
     description: '',
     createdByUserID: 0,
-    pricePH: 0
+    pricePH: 0,
+    availability: []
   }
-  
+
   ngOnInit() {
     this.route.params.subscribe(async (params) => {
       const id = Number(params['id']);
@@ -94,8 +96,11 @@ export class BookOfferComponent {
       selectedWeekdays.removeAt(index);
     }
   }
-  
+
   submit() {
     console.log(this.form.value);
+
+    // Write availabilty array to backend service
+    this.backend.availability =  (this.form.controls['selecetdWeekdays'] as FormArray).value;
   }
 }

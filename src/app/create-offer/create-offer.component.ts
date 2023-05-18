@@ -6,6 +6,7 @@ import { Offer } from '../models/offer';
 import { FileUploaderService } from '../file-uploader.service';
 import { of } from 'rxjs';
 import { Router } from '@angular/router';
+import { KeyValue } from '@angular/common';
 
 @Component({
   selector: 'app-create-offer',
@@ -61,7 +62,8 @@ export class CreateOfferComponent {
         description: this.offerDescription,
         createdByUserID: currUserID,
         pricePH: Number(this.offerPrice),
-        imageURL: this.imageURL
+        imageURL: this.imageURL,
+        availability: this.backend.availability
       }
       this.message = await this.backend.addOffer(offer)
       if (this.message === "Offer added") {
