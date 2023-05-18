@@ -32,6 +32,7 @@ const routes: Routes = [/* Add route info to route array*/
 { path: 'create-account', component: CreateAccountComponent },
 { path: 'browse-offers', component: BrowseOffersComponent },
 { path: 'offer-details/:id', component: OfferDetailsComponent },
+{ path: 'book-offer/:id', component: BookOfferComponent },
 { path: 'book-offer', component: BookOfferComponent },
 { path: 'test', component: TestComponent } 
 ];

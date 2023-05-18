@@ -38,6 +38,8 @@ export class OfferDetailsComponent {
 
   //Help variables
   toggleMyOffers: string = "Operation my Offers"
+  toggleBookOffer: string = "Log in to Book Offer"
+  loggedIn = false;
   debugging = false;
 
   ngOnInit() {
@@ -53,16 +55,16 @@ export class OfferDetailsComponent {
   }
 
   async getOfferForID(id: number) {
-      // Loading courses for current user from firebase backend
-      const documentData = await this.backend.getOfferData(id);
-      if(documentData.exists()) {
-        this.offer.id = documentData.data()['id'];
-        this.offer.title = documentData.data()['title'];
-        this.offer.description = documentData.data()['description'];
-        this.offer.createdByUserID = documentData.data()['createdByUserID'];
-        this.offer.pricePH = documentData.data()['pricePH'];
-        this.offer.imageURL = documentData.data()['imageURL']
-      }
+    // Loading courses for current user from firebase backend
+    const documentData = await this.backend.getOfferData(id);
+    if(documentData.exists()) {
+      this.offer.id = documentData.data()['id'];
+      this.offer.title = documentData.data()['title'];
+      this.offer.description = documentData.data()['description'];
+      this.offer.createdByUserID = documentData.data()['createdByUserID'];
+      this.offer.pricePH = documentData.data()['pricePH'];
+      this.offer.imageURL = documentData.data()['imageURL']
+    }
   }
 
   async checkLogIn(currentOfferID: number) {
@@ -70,6 +72,7 @@ export class OfferDetailsComponent {
     if (loggedIn) {
       const getCurrentUserName = await this.authService.getCurrentUserName()
       const currentUserData = await this.backend.getUserData(getCurrentUserName);
+      this.toggleBookOffer = "Book Offer"
       if (currentUserData.exists()) {
         const loggedInUserCourses: number[] = currentUserData.data()['favOffers']
         if (loggedInUserCourses.includes(currentOfferID)) {
@@ -80,19 +83,29 @@ export class OfferDetailsComponent {
       }
     } else {
       this.toggleMyOffers = "Log in to add to my Offers"
+      this.toggleBookOffer = "Log in to Book Offer"
     }
   }
 
   async toggleUserOffers() {
-    let loggedIn: boolean = await this.authService.isLoggedIn();
-    if (loggedIn && this.toggleMyOffers == "+ Add to my Offers") {
+    this.loggedIn = await this.authService.isLoggedIn();
+    if (this.loggedIn && this.toggleMyOffers === "+ Add to my Offers") {
       this.addToUsersOffers()
       this.toggleMyOffers = "- Remove from my Offers";
-    } else if (loggedIn && this.toggleMyOffers == "- Remove from my Offers") {
+    } else if (this.loggedIn && this.toggleMyOffers === "- Remove from my Offers") {
       this.removeFromUserOffers()
       this.toggleMyOffers = "+ Add to my Offers";
     } else {
       this.router.navigateByUrl("/log-in")
+    }
+  }
+
+  async toggleUserBooking() {
+    this.loggedIn = await this.authService.isLoggedIn();
+    if (this.loggedIn && this.toggleBookOffer === "Book Offer") {
+      this.router.navigateByUrl("/book-offer/" + this.offer.id.toString());
+    } else {
+      this.router.navigateByUrl("/log-in");
     }
   }
 

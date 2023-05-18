@@ -4,12 +4,10 @@
         <div class="btns">
             <button (click)="toggleUserOffers()" class="btn1" [ngClass]="toggleMyOffers == 'Log in to add to my Offers' ? 'log-in' : 'normal'">
                 {{ toggleMyOffers }}
+            </button>        
+            <button (click)="toggleUserBooking()" class="review">
+                {{ toggleBookOffer }}
             </button>
-            <a href="book-offer" routerLink="/book-offer" routerLinkActive="active" ariaCurrentWhenActive="page">
-                <button class="review">
-                    Book Offer
-                </button>
-            </a>
         </div>
     </section>
     <section class="offer-content" *ngIf="offer">
